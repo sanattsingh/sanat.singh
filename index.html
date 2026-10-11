@@ -144,6 +144,38 @@ main>*{display:none!important}#resume{display:block!important;margin:0!important
 .cover.has-image .guruji-logo-crop img{filter:blur(5px) brightness(.52)!important;transition:filter .28s ease,transform .28s ease!important}
 .tile:hover .cover.has-image .guruji-logo-crop img,.tile:focus-visible .cover.has-image .guruji-logo-crop img,.tile:focus-within .cover.has-image .guruji-logo-crop img{filter:blur(0) brightness(.9)!important;transform:scale(1.025)!important}
 @media(prefers-reduced-motion:reduce){.cover.has-image>img,.cover.has-image .guruji-logo-crop img{transition:none!important}}
+
+/* The Pharmassist uses the portfolio's charcoal, white, and red palette */
+.cover.pharmassist-cover{background:#101010 url("assets/the-pharmassist-hero.png") center/cover no-repeat!important;align-items:flex-end!important;justify-content:flex-start!important;padding:16px!important}
+.cover.pharmassist-cover>img.pharmassist-logo{position:absolute!important;inset:16px 16px auto!important;width:calc(100% - 32px)!important;height:66px!important;max-width:none!important;max-height:none!important;padding:9px!important;object-fit:contain!important;background:#fff!important;filter:blur(3px) brightness(.88)!important;opacity:1!important;z-index:0!important}
+.cover.pharmassist-cover:after{display:block!important;background:linear-gradient(0deg,rgba(8,8,8,.88),rgba(8,8,8,.24) 72%,rgba(8,8,8,.08))!important;z-index:1!important}
+.cover.pharmassist-cover .cover-copy{position:relative;z-index:2!important;color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.75)!important}
+.cover.pharmassist-cover .cover-copy small{color:#fff!important}
+.cover.pharmassist-cover .cover-copy em{color:#e50914!important}
+.tile:hover .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-visible .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-within .cover.pharmassist-cover>img.pharmassist-logo{filter:blur(0) brightness(1)!important}
+.pharmassist-art{position:relative;isolation:isolate;background:#101010 url("assets/the-pharmassist-hero.png") center/cover no-repeat!important;align-items:center!important;justify-content:center!important;padding:22px!important;min-height:280px}
+.pharmassist-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.42),rgba(8,8,8,.06) 72%);z-index:0}
+.pharmassist-art:after{display:block!important;background:linear-gradient(0deg,rgba(8,8,8,.32),transparent 72%)!important;z-index:1}
+.pharmassist-art>.pharmassist-logo{position:relative!important;inset:auto!important;z-index:2!important;display:block;width:min(82%,430px)!important;height:auto!important;max-width:none!important;max-height:190px!important;object-fit:contain!important;padding:18px 22px!important;background:#fff!important;border-radius:4px;opacity:1!important;filter:none!important;transform:none!important;box-shadow:0 18px 48px rgba(0,0,0,.35)}
+.pharmassist-tags span{border:1px solid rgba(229,9,20,.65)!important;color:#fff!important;background:rgba(229,9,20,.08)}
+.pharmassist-stats{background:#e50914!important;border-color:#e50914!important}
+.pharmassist-stat{background:#111!important}
+.pharmassist-stat b{color:#fff}
+.pharmassist-stat span{color:#d2d2d2!important}
+.pharmassist-note{color:#aaa!important}
+.pharmassist-section h3,.pharmassist-lede{color:#ddd!important}
+.pharmassist-framework article{border-color:#383838!important;background:#111!important}
+.pharmassist-framework b{color:#fff}
+.pharmassist-framework span{color:#b8b8b8!important}
+.pharmassist-gallery figure{border-color:#383838!important;background:#111!important}
+.pharmassist-channel-link{border-color:rgba(229,9,20,.5)!important;background:linear-gradient(145deg,#271314,#111)!important}
+.pharmassist-channel-link>span:last-child{color:#bbb!important}
+.pharmassist-impact{background:linear-gradient(120deg,#1b1011,#111)!important;border-color:rgba(229,9,20,.55)!important}
+.pharmassist-proof{border-color:#444!important}
+.pharmassist-proof div{border-color:#444!important}
+.pharmassist-proof span{color:#bbb!important}
+.pharmassist-proof b{color:#fff}
+@media(max-width:720px){.pharmassist-art{min-height:220px!important}}
 </style>
 </head>
 <body>
