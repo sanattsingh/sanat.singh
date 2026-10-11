@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Sanat Singh — Brand, Content & Social Media Strategist">
+<title>Sanat Singh — Social Media Portfolio</title>
+<style>
+:root{--bg:#080808;--panel:#151515;--panel2:#1c1c1c;--text:#f5f5f4;--muted:#aaa;--red:#e50914;--line:#303030;--width:1200px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--width),calc(100% - 48px));margin:auto}
+header{height:66px;position:sticky;top:0;z-index:10;background:#080808ed;border-bottom:1px solid #252525;display:flex;align-items:center;justify-content:space-between;padding:0 max(calc((100vw - var(--width))/2),24px)}
+.brand{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:800;letter-spacing:.13em}
+.brand-mark{width:13px;height:22px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)}
+nav{display:flex;align-items:center;gap:22px}nav a{font-size:11px;color:#ccc}nav a:hover{color:#fff}
+.menu{display:none;background:#111;border:1px solid #444;color:white;padding:7px 10px}
+.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 76% 38%,#762128 0,#321316 27%,#101010 65%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080808 0%,#080808bb 40%,transparent 100%),linear-gradient(0deg,#080808,transparent 42%)}
+.poster{position:absolute;right:15%;top:14%;width:220px;height:340px;background:linear-gradient(150deg,#485444,#111713 60%,#8c2028);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(3deg);box-shadow:0 20px 60px #0009}
+.poster small{font-size:8px;letter-spacing:.18em}.poster b{font-size:36px;line-height:.95;letter-spacing:-.06em}.poster em{font-style:normal;color:#ff626a}
+.hero-copy{position:relative;z-index:1;padding:68px 0;max-width:700px}
+.eyebrow{margin:0 0 13px;color:#ff626a;font-size:9px;font-weight:bold;letter-spacing:.18em;text-transform:uppercase}
+h1{font-size:clamp(60px,10vw,118px);line-height:.82;letter-spacing:-.075em;margin:0 0 20px}
+.role{font-size:clamp(16px,2vw,22px);font-weight:bold;margin:0 0 10px}
+.hero p:not(.eyebrow):not(.role){max-width:560px;color:#ccc;font-size:13px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.button{display:inline-block;padding:11px 16px;border-radius:3px;background:#eee;color:#111;font-size:11px;font-weight:bold}
+.button.red{background:var(--red);color:white}
+.hero-meta{display:flex;gap:13px;color:#aaa;font-size:9px;letter-spacing:.1em;margin-top:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#151515;border:1px solid #292929;margin-top:-1px}
+.stat{padding:18px 20px;border-right:1px solid #303030}.stat:last-of-type{border:0}
+.stat b{display:block;font-size:25px}.stat span{color:#aaa;font-size:9px}
+.period{grid-column:1/-1;text-align:right;padding:0 16px 10px;color:#888;font-size:8px}
+section{scroll-margin-top:78px}.section{padding:66px 0 12px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
+.section-head h2,.case h2,.about h2{font-size:clamp(30px,4.5vw,48px);line-height:1;letter-spacing:-.05em;margin:0}
+.section-head h2 em,.about h2 em{font-style:normal;color:#aaa}
+.section-head>p{max-width:370px;color:#999;font-size:11px;margin:0}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(245px,1fr);gap:13px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory}
+.tile{scroll-snap-align:start;transition:transform .2s}.tile:hover{transform:scale(1.025)}
+.cover{height:185px;position:relative;overflow:hidden;display:flex;align-items:end;padding:16px;background:radial-gradient(circle at 75% 18%,#477658,#173528 46%,#0d1711)}
+.cover:before{content:"";position:absolute;width:240px;height:240px;border:1px solid #ffffff3d;border-radius:50%;right:-80px;top:-135px;box-shadow:0 0 0 28px #ffffff0b,0 0 0 55px #ffffff07}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000b,transparent 75%)}
+.cover.knauf{background:radial-gradient(circle at 75% 18%,#baa6cf,#534161 46%,#211c27)}
+.cover.magni{background:radial-gradient(circle at 75% 18%,#e2a27b,#873c36 46%,#27191a)}
+.cover.guruji{background:radial-gradient(circle at 75% 18%,#c6a55a,#665027 46%,#211c12)}
+.cover-copy{position:relative;z-index:1}.cover small{font-size:8px;letter-spacing:.15em;color:#ddd}
+.cover b{display:block;font-size:31px;line-height:.98;letter-spacing:-.05em;margin-top:7px}.cover em{font-style:normal;color:#ff646a}
+.caption{display:flex;justify-content:space-between;gap:8px;padding:10px 2px 0;font-size:11px}
+.caption span{font-size:9px;color:#888}.tile p{font-size:10px;color:#aaa;margin:2px}
+.brands{border-block:1px solid #292929;margin-top:30px;padding:24px 0}
+.brand-list{display:flex;gap:10px;overflow:auto;white-space:nowrap;padding-top:8px}
+.brand-list span{background:#151515;border:1px solid #292929;padding:8px 12px;font-size:10px;color:#ccc}
+.case{padding:70px 0 14px;border-bottom:1px solid #292929}
+.case-top{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.case-art{min-height:280px;padding:22px;display:flex;align-items:end;background:radial-gradient(circle at 75% 18%,#477658,#173528 46%,#0d1711);position:relative;overflow:hidden}
+.case-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent 70%)}
+.case-art.knauf{background:radial-gradient(circle at 75% 18%,#baa6cf,#534161 46%,#211c27)}
+.case-art.magni{background:radial-gradient(circle at 75% 18%,#e2a27b,#873c36 46%,#27191a)}
+.case-art.guruji{background:radial-gradient(circle at 75% 18%,#c6a55a,#665027 46%,#211c12)}
+.case-art strong{position:relative;z-index:1;font-size:clamp(38px,6vw,66px);line-height:.95;letter-spacing:-.06em}
+.case-art em{font-style:normal;color:#ff646a}
+.case-copy h2{margin-bottom:12px}.case-copy>p:not(.eyebrow){font-size:12px;color:#aaa}
+.meta{display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid #333;padding-top:12px;margin-top:18px}
+.meta span{font-size:9px;color:#888}.meta b{display:block;color:#eee;font-size:10px}
+.case-body{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0 36px}
+.case-body h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 7px}
+.case-body p,.case-body li{font-size:11px;color:#aaa}.case-body ul{padding-left:17px}
+.outcomes{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0}
+.outcomes div{border-left:2px solid var(--red);padding-left:9px}
+.outcomes b{display:block;font-size:22px}.outcomes span{font-size:8px;color:#999}
+.note{font-size:9px!important;color:#777!important}
+.resume{margin-top:64px;padding:34px;background:#111;border:1px solid #292929}
+.resume-top{display:flex;justify-content:space-between;align-items:start;gap:20px;border-bottom:1px solid #333;padding-bottom:18px}
+.resume-top h2{margin:0;font-size:38px;line-height:1}.resume-top p{font-size:10px;color:#aaa}
+.resume-grid{display:grid;grid-template-columns:1.55fr .8fr;gap:28px;padding-top:22px}
+.resume h3{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#ff626a}
+.job{border-top:1px solid #2e2e2e;padding:12px 0;break-inside:avoid}
+.job h4{font-size:13px;margin:0}.jobline{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:9px;color:#aaa}
+.job ul{padding-left:16px;font-size:10px;color:#bbb;margin:6px 0}.job li{margin:4px 0}
+.side h4{font-size:10px;margin:16px 0 4px}.side p,.side li{font-size:9px;color:#aaa}
+.side ul{padding-left:16px}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;align-items:center;padding:70px 0}
+.initials{min-height:230px;background:linear-gradient(145deg,#562027,#151515 75%);display:grid;place-items:center;font-size:70px;font-weight:bold}
+.about p{max-width:650px;color:#aaa;font-size:12px}
+.contact{background:#141414;border-top:1px solid #292929;padding:45px 0}
+.contact-inner{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.contact h2{font-size:clamp(36px,6vw,62px);line-height:.95;margin:0}
+.contact p{font-size:11px;color:#aaa}.contact-links{display:flex;gap:9px;flex-wrap:wrap}
+footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:20px 0 28px;color:#777;font-size:9px}
+footer a{color:#aaa;margin-left:12px}
+@media(max-width:720px){
+.wrap{width:calc(100% - 32px)}header{padding:0 16px}.menu{display:block}
+nav{display:none;position:absolute;top:65px;left:0;right:0;padding:15px 18px;background:#111;flex-direction:column;align-items:stretch;border-bottom:1px solid #333}
+nav.open{display:flex}nav a{font-size:13px}
+.hero{min-height:530px}.hero:before{background:linear-gradient(90deg,#080808ee,#08080888),linear-gradient(0deg,#080808,transparent 70%)}
+.poster{right:6%;top:13%;width:145px;height:220px;opacity:.65}.poster b{font-size:25px}
+.hero-copy{padding-top:90px}.hero h1{font-size:clamp(57px,16vw,82px)}
+.stats{grid-template-columns:repeat(2,1fr)}.stat{padding:14px}.stat:nth-of-type(2){border-right:0}
+.section{padding-top:50px}.section-head{display:block}.section-head>p{margin-top:12px}
+.rail{grid-auto-columns:minmax(230px,78vw)}
+.case-top,.case-body,.resume-grid,.about{grid-template-columns:1fr}
+.case{padding-top:52px}.case-art{min-height:220px}
+.resume{padding:20px 16px}.resume-top{display:block}
+.initials{min-height:170px}.contact-inner{display:block}.contact-links{margin-top:20px}
+}
+@media print{
+body{background:white!important;color:#111!important;font-size:10pt}
+body>*{display:none!important}main{display:block!important}
+main>*{display:none!important}#resume{display:block!important;margin:0!important;padding:0!important;border:0!important;background:white!important;color:#111!important;width:100%!important}
+#resume *{color:#111!important;background:transparent!important}
+#resume .resume-top{border-color:#aaa}#resume .resume-grid{grid-template-columns:1.5fr .8fr}
+#resume h3{color:#a00000!important}.job{border-color:#ccc}
+#resume button{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="#home"><span class="brand-mark"></span>SANAT SINGH</a><button class="menu" id="menu" aria-expanded="false">Menu</button><nav id="nav"><a href="#home">Home</a><a href="#work">Selected Work</a><a href="#about">About</a><a href="#resume">Résumé</a><a href="#contact">Contact</a></nav></header>
+<main id="home">
+<section class="hero"><div class="poster" aria-hidden="true"><small>BRAND · CONTENT · SOCIAL</small><b>MAKE<br>THE<br><em>MESSAGE</em><br>MATTER.</b><small>INSIGHT → IDEAS → IMPACT</small></div><div class="wrap hero-copy"><p class="eyebrow">SOCIAL MEDIA SPECIALIST · STRATEGY · CAMPAIGNS · CONTENT</p><h1>SANAT<br>SINGH</h1><p class="role">Brand, Content &amp; Social Media Strategist</p><p>I turn business goals into social stories people want to spend time with — from B2B technology and leadership thought leadership to product launches and audience-first campaigns.</p><div class="actions"><a class="button red" href="#work">▶ &nbsp; Explore my work</a><a class="button" href="#resume">＋ &nbsp; View résumé</a></div><div class="hero-meta">NOIDA, INDIA · 5+ YEARS ACROSS INDIA &amp; CANADA</div></div></section>
+<section class="wrap stats" aria-label="Selected results"><div class="stat"><b>1.5M+</b><span>Ksolves LinkedIn impressions</span></div><div class="stat"><b>74.5%</b><span>organic share of impressions</span></div><div class="stat"><b>7,277</b><span>new followers in one year</span></div><div class="stat"><b>2,000+</b><span>MagniClipper pre-launch sign-ups</span></div><div class="period">Ksolves analytics: 27 Sep 2025–26 Sep 2026 · Sign-ups are leads, not crowdfunding backers.</div></section>
+<section class="section wrap" id="work"><div class="section-head"><div><p class="eyebrow">SELECTED WORK / 01—04</p><h2>Featured projects.<br><em>Press play.</em></h2></div><p>Four stories across B2B technology, audience-led communication, product launch and video growth. Team contributions are clearly attributed.</p></div><div class="rail">
+<a class="tile" href="#ksolves"><div class="cover"><div class="cover-copy"><small>01 · B2B · AI-FIRST</small><b>AI First.<br><em>Always.</em></b></div></div><div class="caption"><strong>Ksolves</strong><span>2025—26</span></div><p>Turning a new brand position into a consistent LinkedIn story.</p></a>
+<a class="tile" href="#knauf"><div class="cover knauf"><div class="cover-copy"><small>02 · AUDIENCE · STORY</small><b>Know who<br><em>you're for.</em></b></div></div><div class="caption"><strong>Knauf India</strong><span>Team project</span></div><p>Human, bilingual product communication shaped by audience.</p></a>
+<a class="tile" href="#magni"><div class="cover magni"><div class="cover-copy"><small>03 · PRODUCT · PRE-LAUNCH</small><b>Make the<br><em>first move.</em></b></div></div><div class="caption"><strong>MagniClipper</strong><span>Sapsol × CGX</span></div><p>Pre-launch marketing that generated 2,000+ sign-ups.</p></a>
+<a class="tile" href="#guruji"><div class="cover guruji"><div class="cover-copy"><small>04 · VIDEO · COMMUNITY</small><b>500 to<br><em>2,000.</em></b></div></div><div class="caption"><strong>Guruji Astro</strong><span>2022—23</span></div><p>YouTube growth through audience-focused content strategy.</p></a>
+</div><div class="brands"><p class="eyebrow">MORE BRANDS, MORE CONTEXTS</p><div class="brand-list"><span>HCLTech · ORM</span><span>Kohinoor Indian Rum</span><span>Senior Shield</span><span>Serene Communities</span><span>CGX Medical</span><span>MLC College</span><span>STEM Montessori Academy of Canada</span></div></div></section>
+<section class="case wrap" id="ksolves"><div class="case-top"><div class="case-art"><strong>AI First.<br><em>Always.</em></strong></div><div class="case-copy"><p class="eyebrow">CASE 01 · B2B LINKEDIN · BRAND REPOSITIONING</p><h2>Ksolves:<br>a content engine<br>for a new era.</h2><p>Helped translate Ksolves’ shift from “Emerging Ahead Always” to “AI First. Always.” into a consistent LinkedIn-first story connecting technology expertise with the people and leadership behind it.</p><div class="meta"><span><b>MY ROLE</b>Strategy, planning, content, publishing</span><span><b>COMPANY</b>Ksolves India Limited</span><span><b>PERIOD</b>Oct 2025–present</span></div></div></div><div class="case-body"><div><h3>The challenge · The work</h3><p>Make the AI-first positioning part of everyday communication, not only a corporate headline. Planned content across technology, case studies, PDF posts, carousels, video, webinars, events and people-led stories.</p><ul><li>Contributed to rebrand discussions, social activation, content direction and visual-direction decisions.</li><li>The design team created the final visual identity system; the broader repositioning was cross-functional.</li><li>Named the Enabling Series, a senior-leadership video property within the broader Enabling communication.</li><li>Developed executive and BFSI thought leadership with four senior leaders.</li></ul></div><div><h3>The impact</h3><p>Page analytics reflect a sustained content and distribution system, not a single viral campaign.</p><div class="outcomes"><div><b>1,505,124</b><span>TOTAL IMPRESSIONS</span></div><div><b>1,121,252</b><span>ORGANIC · 74.5%</span></div><div><b>7,277</b><span>NEW FOLLOWERS</span></div><div><b>17.1%</b><span>ENGAGEMENT RATE</span></div></div><p class="note">Also: 383,872 sponsored impressions · 146,685 page views · 54,176 unique visitors · 13,024 reactions · 319 posts · +87.9% engagement vs competitors. Period: 27 Sep 2025–26 Sep 2026.</p></div></div></section>
+<section class="case wrap" id="knauf"><div class="case-top"><div class="case-art knauf"><strong>Know your<br><em>audience.</em></strong></div><div class="case-copy"><p class="eyebrow">CASE 02 · AUDIENCE-LED CONTENT · BUFFALO SOLDIERS</p><h2>Knauf India:<br>make product stories<br>feel human.</h2><p>Contributed within the wider account team to more relevant product communication, based on audience needs, relatable situations and bilingual storytelling.</p><div class="meta"><span><b>MY ROLE</b>Strategy inputs, planning, ideation</span><span><b>COMPANY</b>Buffalo Soldiers Digital</span><span><b>PERIOD</b>Jul–Oct 2025</span></div></div></div><div class="case-body"><div><h3>The approach · The work</h3><p>The team moved beyond product specifications toward audience-specific stories using familiar human situations.</p><ul><li>Five initial audience groups were consolidated into three broader segments.</li><li>Contributed to Hindi and English story-led video concepts and content calendars.</li><li>Supported creative coordination, publishing, reporting and product communication including Thundersteel.</li><li>Selected content received paid amplification through the wider team.</li></ul></div><div><h3>The impact</h3><div class="outcomes"><div><b>5 → 3</b><span>AUDIENCE GROUPS REFINED</span></div></div><p>More focused segments gave the team a clearer basis for relevant communication.</p><p class="note">Collaborative account work. I contributed as part of the Buffalo Soldiers team; the full strategy and paid-media function were not solely mine.</p></div></div></section>
+<section class="case wrap" id="magni"><div class="case-top"><div class="case-art magni"><strong>Meet<br><em>MagniClipper.</em></strong></div><div class="case-copy"><p class="eyebrow">CASE 03 · PRODUCT LAUNCH · SAPSOL × CGX MEDICAL</p><h2>Build interest<br>before launch day.</h2><p>Supported pre-launch positioning and crowdfunding preparation for a consumer product with a swivel head, magnifying lens, wide grip and titanium body.</p><div class="meta"><span><b>MY ROLE</b>Website, campaign pages, Meta campaigns</span><span><b>COMPANY</b>Sapsol Technologies</span><span><b>PERIOD</b>Sep 2024–Mar 2025</span></div></div></div><div class="case-body"><div><h3>The work</h3><ul><li>Helped redesign the product website and developed the Indiegogo campaign page.</li><li>Developed a Kickstarter page; that campaign did not go live.</li><li>Supported product positioning and pre-launch digital strategy.</li><li>Ran Meta campaigns to the website sign-up funnel.</li></ul></div><div><h3>The impact</h3><div class="outcomes"><div><b>2,000+</b><span>PRE-LAUNCH WEBSITE SIGN-UPS</span></div></div><p>People expressing purchase interest before the crowdfunding launch.</p><p class="note">This figure is pre-launch website leads/sign-ups, not crowdfunding backers.</p></div></div></section>
+<section class="case wrap" id="guruji"><div class="case-top"><div class="case-art guruji"><strong>Make a<br><em>connection.</em></strong></div><div class="case-copy"><p class="eyebrow">CASE 04 · VIDEO · YOUTUBE · TEAM LEADERSHIP</p><h2>Guruji Astro:<br>growing a channel<br>with purpose.</h2><p>Led a five-person team and combined steady video production with audience-focused social content strategy.</p><div class="meta"><span><b>MY ROLE</b>Social Media Manager</span><span><b>COMPANY</b>Guruji Astro</span><span><b>PERIOD</b>Jul 2022–Feb 2023</span></div></div></div><div class="case-body"><div><h3>The work</h3><ul><li>Led five executives across content planning, social execution and quality control.</li><li>Managed strategy and audience-aligned content calendars.</li><li>Produced and edited 20+ video assets per month.</li><li>Executed email marketing and monitored performance.</li></ul></div><div><h3>The impact</h3><div class="outcomes"><div><b>500 → 2,000</b><span>YOUTUBE SUBSCRIBERS · 300% GROWTH</span></div><div><b>20+</b><span>VIDEO ASSETS PER MONTH</span></div></div></div></div></section>
+<section class="wrap resume" id="resume"><div class="resume-top"><div><p class="eyebrow">RÉSUMÉ · STRATEGY · CAMPAIGNS · CONTENT</p><h2>Sanat Singh</h2><p><b>SOCIAL MEDIA SPECIALIST | STRATEGY, CAMPAIGNS &amp; CONTENT</b><br>Noida, India · <a href="tel:+918559823300">+91 8559823300</a> · <a href="mailto:sanattsingh009@gmail.com">sanattsingh009@gmail.com</a> · <a href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn ↗</a></p></div><button class="button red" onclick="window.print()">Print / Save résumé as PDF</button></div>
+<p style="font-size:11px;color:#bbb">Social Media Specialist with <b>5+ years of experience across Canada and India</b>, specializing in social media strategy, integrated campaigns, content development and performance reporting across organic and paid channels. Experienced in managing multiple brand accounts, editorial calendars and creative production, with strengths in stakeholder coordination, social listening, competitive research, community engagement and campaign analysis across B2B, banking/fintech initiatives and consumer brands.</p>
+<div class="resume-grid"><div><h3>Professional experience</h3>
+<article class="job"><h4>Ksolves India Limited</h4><div class="jobline"><b>Senior Social Media Specialist</b><span>October 2025–Present · Noida, India</span></div><ul><li>Manage 9+ LinkedIn pages alongside Meta, X and online forums.</li><li>Lead social strategy, content planning, calendars, campaign ideation, research and platform-specific content.</li><li>Execute 2 end-to-end LinkedIn webinars per week, from planning and promotion to delivery and follow-up content.</li><li>Support banking and fintech client onboarding and brand/digital communication.</li><li>Execute Meta and LinkedIn campaigns for awareness, audience growth and B2B lead generation.</li><li>Use research, social listening and performance insights to guide content.</li></ul></article>
+<article class="job"><h4>Buffalo Soldiers Digital</h4><div class="jobline"><b>Social Media Specialist</b><span>July–October 2025 · Noida, India</span></div><ul><li>Managed accounts for Kohinoor Indian Rum, Senior Shield, Serene Communities and Knauf India.</li><li>Developed calendars, campaign plans and platform-specific content with copy and creative teams.</li><li>Coordinated publishing, scheduling and reporting across accounts.</li><li>Led HCLTech ORM, monitoring conversations and sentiment and supporting timely responses.</li></ul></article>
+<article class="job"><h4>Sapsol Technologies</h4><div class="jobline"><b>Brand &amp; Social Media Marketing Strategist</b><span>September 2024–March 2025 · Mississauga, Canada</span></div><ul><li>Increased engagement by 35% across Sapsol Technologies, MLC College and CGX Medical.</li><li>Supported MagniClipper crowdfunding preparation, generating 2,000+ pre-launch website sign-ups through Meta campaigns.</li><li>Résumé-reported: 40% increase in brand awareness through Meta advertising and email marketing.</li><li>Redesigned the Sapsol website, contributing to a résumé-reported 50% increase in website traffic.</li></ul></article>
+<article class="job"><h4>STEM Montessori Academy of Canada</h4><div class="jobline"><b>Volunteer, Brand Engagement Consultant</b><span>July 2023–September 2024 · Remote, Canada</span></div><ul><li>Supported brand and content strategy, multimedia content, email marketing and competitor research.</li><li>Collaborated with internal teams and interns to maintain content quality and timely delivery.</li></ul></article>
+<article class="job"><h4>Guruji Astro</h4><div class="jobline"><b>Social Media Manager</b><span>July 2022–February 2023 · Jaipur, India</span></div><ul><li>Led five executives across content planning, social execution, brand communication and quality control.</li><li>Grew YouTube from 500 to 2,000 subscribers and produced 20+ video assets monthly.</li><li>Executed email marketing and monitored content performance.</li></ul></article>
+</div><aside class="side"><h3>Skills &amp; details</h3><h4>Social media &amp; content</h4><p>Strategy · Organic and paid social · Content development · Editorial calendars · Copywriting · Community management · Social listening</p><h4>Campaigns &amp; stakeholders</h4><p>Integrated campaigns · Campaign planning · Brand consistency · Creative briefing · Stakeholder coordination · Project management</p><h4>Analytics &amp; optimization</h4><p>Social analytics · KPI reporting · Performance analysis · Audience insights · Competitive benchmarking · Trend analysis</p><h4>Platforms &amp; tools</h4><p>LinkedIn · Meta · YouTube · X · Sprinklr · Meltwater · Canva · Figma · Premiere Pro · Photoshop · After Effects</p><h4>Award</h4><p><b>Rising Star Award</b><br>Q1 2026–27 · Ksolves India Limited</p><h4>Certifications</h4><ul><li>HubSpot: Content Marketing; Social Media Marketing I &amp; II</li><li>LinkedIn: Social Media Marketing Strategy; Digital Marketing Foundations</li><li>Anthropic: AI Fluency; Claude 101</li><li>LinkedIn &amp; PMI: Generative AI for Digital Marketers</li></ul><h4>Education</h4><ul><li>PG Certificate, Project Management · Georgian College · Aug 2024</li><li>PG Certificate, Marketing Management · Georgian College · Dec 2023</li><li>Advanced Certification, Audio &amp; Video Editing · TGC Animation · Jun 2021</li><li>BA, Journalism &amp; Mass Communication · Manipal University · Aug 2020</li></ul></aside></div></section>
+<section class="wrap about" id="about"><div class="initials" aria-label="Sanat Singh initials">SS</div><div><p class="eyebrow">ABOUT SANAT</p><h2>Clear thinking.<br><em>Human stories.</em></h2><p>Hi, I’m Sanat Singh — a social media specialist with 5+ years of experience across India and Canada. I work across brand strategy, content, campaigns and social, helping teams bring business goals to life in ways that make sense to their audiences.</p><p>My experience spans B2B technology, banking and fintech initiatives, consumer health, education, lifestyle and reputation management. I enjoy making complex topics more approachable, building a dependable publishing rhythm and learning from audience response.</p><p><a class="button" href="#resume">Read résumé ↓</a> &nbsp; <a class="button" href="#work">Explore work ↑</a></p></div></section>
+<section class="contact" id="contact"><div class="wrap contact-inner"><div><p class="eyebrow">CONTACT</p><h2>Let’s make the<br>next story count.</h2><p>For roles, collaborations or a conversation about social strategy.</p></div><div class="contact-links"><a class="button red" href="mailto:sanattsingh009@gmail.com">Email Sanat ↗</a><a class="button" href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button" href="tel:+918559823300">Call ↗</a></div></div></section>
+</main>
+<footer class="wrap"><a class="brand" href="#home"><span class="brand-mark"></span>SANAT SINGH</a><span>Brand · Content · Social</span><span><a href="mailto:sanattsingh009@gmail.com">Email</a> <a href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn</a></span><small>© 2026 Sanat Singh · Noida, India</small></footer>
+<script>
+const menu=document.querySelector("#menu"),nav=document.querySelector("#nav");
+menu.addEventListener("click",()=>{let open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",open)});
+nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
+</script>
+</body>
+</html>
