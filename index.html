@@ -123,6 +123,27 @@ main>*{display:none!important}#resume{display:block!important;margin:0!important
 .pharmassist-cover{background:#fff;align-items:center;justify-content:center}.cover.pharmassist-cover:after{background:none}.pharmassist-cover .cover-copy{z-index:2}.pharmassist-mark{position:absolute;inset:18px;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:#fff;color:#241b36;z-index:1}.pharmassist-mark>span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#5c3c9a;color:white;font-size:28px;line-height:1;font-weight:700}.pharmassist-mark strong{font-size:clamp(21px,3vw,32px);line-height:.95;letter-spacing:-.06em}.pharmassist-mark-large{inset:20px;gap:16px}.pharmassist-mark-large>span{width:56px;height:56px;font-size:44px}.pharmassist-mark-large strong{font-size:clamp(36px,5vw,60px)}.pharmassist-art{background:radial-gradient(circle at 75% 18%,#a38ae0,#3c2b75 50%,#14101f)!important;height:100%;min-height:280px;align-items:center;justify-content:center}.pharmassist-art:after{display:none}.pharmassist-tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}.pharmassist-tags span{border:1px solid #51475e;color:#ddd;padding:6px 9px;font-size:9px;letter-spacing:.04em}.pharmassist-at-a-glance{padding:28px 0 12px;border-bottom:1px solid #292929}.pharmassist-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#302a38;border:1px solid #302a38}.pharmassist-stat{min-width:0;padding:17px 14px;background:#111}.pharmassist-stat b{display:block;font-size:clamp(22px,3vw,34px);line-height:1.1;letter-spacing:-.04em}.pharmassist-stat span{display:block;color:#aaa;font-size:9px;line-height:1.45;margin-top:8px}.pharmassist-note{font-size:9px;color:#777;line-height:1.6;margin:12px 0}.pharmassist-section{padding:44px 0 8px}.pharmassist-section h3,.pharmassist-lede{font-size:13px;color:#bbb;max-width:900px}.pharmassist-framework{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.pharmassist-framework article{padding:15px;border:1px solid #303030;background:#111;min-height:95px}.pharmassist-framework b,.pharmassist-framework span{display:block}.pharmassist-framework b{font-size:11px;margin-bottom:7px}.pharmassist-framework span{font-size:10px;color:#999}.pharmassist-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.pharmassist-gallery figure{margin:0;background:#111;border:1px solid #303030;padding:7px;min-width:0}.pharmassist-gallery img{display:block;width:100%;height:200px;object-fit:contain;background:#fff}.pharmassist-gallery figcaption{padding:7px 2px 2px;color:#aaa;font-size:9px}.pharmassist-channel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}.pharmassist-channel-link{min-height:170px}.pharmassist-channel-link{display:flex;flex-direction:column;justify-content:center;gap:12px;padding:24px;border:1px solid #383143;background:linear-gradient(145deg,#221a35,#111)}.pharmassist-channel-link b{font-size:20px;line-height:1.15}.pharmassist-channel-link>span:last-child{color:#999;font-size:10px}.pharmassist-impact{margin-top:12px;padding:30px 22px 12px;background:linear-gradient(120deg,#17131e,#111);border:1px solid #39313f}.pharmassist-proof{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-block:1px solid #38313e;margin-top:20px}.pharmassist-proof div{padding:14px 12px;border-right:1px solid #38313e}.pharmassist-proof div:last-child{border-right:0}.pharmassist-proof span,.pharmassist-proof b{display:block}.pharmassist-proof span{font-size:9px;color:#999}.pharmassist-proof b{font-size:11px;margin-top:8px}.pharmassist-close{padding:42px 0 18px}.pharmassist-close .button{margin-top:8px}
 @media(max-width:900px){.pharmassist-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.pharmassist-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-proof{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-proof div:nth-child(2n){border-right:0}.pharmassist-channel-grid{grid-template-columns:1fr}.pharmassist-framework{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.pharmassist-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-framework{grid-template-columns:1fr}.pharmassist-gallery img{height:150px}.pharmassist-impact{padding:22px 14px}.pharmassist-proof{grid-template-columns:1fr}.pharmassist-proof div{border-right:0;border-bottom:1px solid #38313e}.pharmassist-proof div:last-child{border-bottom:0}.pharmassist-case .case-top{gap:18px}.pharmassist-art{min-height:220px}}
+
+/* Project covers: blurred image first, readable headline on top, full image on hover/focus */
+.cover.has-image{position:relative;isolation:isolate;overflow:hidden}
+.cover.has-image>img{position:absolute!important;inset:-6px!important;display:block!important;width:calc(100% + 12px)!important;height:calc(100% + 12px)!important;max-width:none!important;object-fit:cover!important;opacity:1!important;filter:blur(5px) brightness(.5)!important;transform:none!important;z-index:0!important;transition:filter .28s ease,transform .28s ease,opacity .28s ease!important}
+.cover.has-image:after{content:"";position:absolute;inset:0;display:block;background:linear-gradient(0deg,rgba(8,8,8,.82),rgba(8,8,8,.28) 72%,rgba(8,8,8,.12))!important;z-index:1!important;pointer-events:none}
+.cover.has-image .cover-copy{position:relative;z-index:2!important;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.75)}
+.cover.has-image .cover-copy small{color:#fff}
+.tile:hover .cover.has-image>img,.tile:focus-visible .cover.has-image>img,.tile:focus-within .cover.has-image>img{filter:blur(0) brightness(.9)!important;transform:scale(1.025)!important;opacity:1!important}
+.tile:hover .cover.has-image:after,.tile:focus-visible .cover.has-image:after,.tile:focus-within .cover.has-image:after{background:linear-gradient(0deg,rgba(8,8,8,.66),rgba(8,8,8,.16) 72%,rgba(8,8,8,.04))!important}
+.cover.pharmassist-cover{background:#fff!important;align-items:flex-end;justify-content:flex-start;padding:16px!important}
+.cover.pharmassist-cover>img.pharmassist-logo{inset:0!important;width:100%!important;height:100%!important;padding:10px!important;object-fit:contain!important;background:#fff!important;filter:blur(3px) brightness(.82)!important;transform:none!important;opacity:1!important;z-index:0!important}
+.cover.pharmassist-cover:after{background:rgba(255,255,255,.28)!important;z-index:1!important}
+.cover.pharmassist-cover .cover-copy{color:#19151f;text-shadow:none}
+.cover.pharmassist-cover .cover-copy small{color:#4b4552}
+.cover.pharmassist-cover .cover-copy em{color:#e8327c}
+.tile:hover .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-visible .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-within .cover.pharmassist-cover>img.pharmassist-logo{filter:blur(0) brightness(1)!important;transform:none!important}
+.tile:hover .cover.pharmassist-cover:after,.tile:focus-visible .cover.pharmassist-cover:after,.tile:focus-within .cover.pharmassist-cover:after{background:rgba(255,255,255,.12)!important}
+.cover.has-image .guruji-logo-crop{position:absolute;inset:0;z-index:0!important;overflow:hidden}
+.cover.has-image .guruji-logo-crop img{filter:blur(5px) brightness(.52)!important;transition:filter .28s ease,transform .28s ease!important}
+.tile:hover .cover.has-image .guruji-logo-crop img,.tile:focus-visible .cover.has-image .guruji-logo-crop img,.tile:focus-within .cover.has-image .guruji-logo-crop img{filter:blur(0) brightness(.9)!important;transform:scale(1.025)!important}
+@media(prefers-reduced-motion:reduce){.cover.has-image>img,.cover.has-image .guruji-logo-crop img{transition:none!important}}
 </style>
 </head>
 <body>
@@ -177,25 +198,3 @@ nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove(
 </script>
 </body>
 </html>
-/* Readable project covers and supplied Pharmassist identity */
-.cover.has-image>img:not(.pharmassist-logo){filter:blur(3px) brightness(.55);transform:scale(1.06);opacity:.9}
-.cover.has-image:after{background:linear-gradient(0deg,rgba(8,8,8,.86),rgba(8,8,8,.34));z-index:1}
-.cover.pharmassist-cover{background:#fff;align-items:center;justify-content:center;padding:12px}
-.cover.pharmassist-cover:after{display:none}
-.cover.pharmassist-cover>.pharmassist-logo{position:relative;inset:auto;width:92%;max-width:296px;height:auto;max-height:100%;object-fit:contain;background:transparent;opacity:1;filter:none;transform:none;z-index:2}
-.pharmassist-art{align-items:center;justify-content:center}
-.pharmassist-art>.pharmassist-logo{position:relative;width:min(76%,430px);height:auto;max-height:220px;object-fit:contain;background:#fff;padding:15px;border-radius:8px;opacity:1;filter:none;transform:none;z-index:2}
-.guruji-logo-crop img{filter:blur(2.5px) brightness(.58);transform:scale(1.05)}
-
-/* Keep project titles readable while allowing image reveal on hover or focus */
-.cover.has-image>img{filter:blur(4px) brightness(.48)!important;transform:scale(1.08)!important;opacity:.92!important;transition:filter .3s ease,transform .3s ease,opacity .3s ease}
-.tile:hover .cover.has-image>img,.tile:focus-within .cover.has-image>img{filter:blur(0) brightness(.86)!important;transform:scale(1.02)!important;opacity:1!important}
-.cover.has-image:after{background:linear-gradient(0deg,rgba(8,8,8,.88),rgba(8,8,8,.34) 65%,rgba(8,8,8,.12));z-index:1}
-.tile:hover .cover.has-image:after,.tile:focus-within .cover.has-image:after{background:linear-gradient(0deg,rgba(8,8,8,.78),rgba(8,8,8,.24) 65%,rgba(8,8,8,.08))}
-.cover.pharmassist-cover{background:#211c2b;align-items:center;justify-content:center;padding:12px}
-.cover.pharmassist-cover>.pharmassist-logo{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;object-fit:contain;background:transparent;opacity:.95;z-index:0}
-.cover.pharmassist-cover:after{z-index:1}
-.cover.pharmassist-cover .cover-copy{z-index:2}
-.guruji-logo-crop img{filter:blur(4px) brightness(.55);transform:scale(1.05);transition:filter .3s ease,transform .3s ease}
-.tile:hover .guruji-logo-crop img,.tile:focus-within .guruji-logo-crop img{filter:blur(0) brightness(.86);transform:scale(1.02)}
-@media(prefers-reduced-motion:reduce){.cover.has-image>img,.guruji-logo-crop img{transition:none}}
