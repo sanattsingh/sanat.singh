@@ -1,0 +1,322 @@
+[
+  {
+    "source": "CGX-Website-Logo-V1.0_1_360x1.png",
+    "path": "assets/brands/cgx-medical.png",
+    "brand": "CGX Medical",
+    "kind": "logo",
+    "width": 260,
+    "height": 84,
+    "bytes": 8086,
+    "used": true
+  },
+  {
+    "source": "guruji 1 rupee campaign banner.jpg",
+    "path": "assets/projects/guruji-astro/one-rupee-campaign.jpg",
+    "brand": "Guruji Astro",
+    "kind": "campaign",
+    "width": 738,
+    "height": 225,
+    "bytes": 19625,
+    "used": true
+  },
+  {
+    "source": "Guruji-Logo-1.png",
+    "path": "assets/brands/guruji-astro.png",
+    "brand": "Guruji Astro",
+    "kind": "logo",
+    "width": 459,
+    "height": 510,
+    "bytes": 11047,
+    "used": true
+  },
+  {
+    "source": "HCL-logo-768x432.png",
+    "path": "assets/brands/hcltech.png",
+    "brand": "HCLTech",
+    "kind": "logo",
+    "width": 767,
+    "height": 142,
+    "bytes": 12096,
+    "used": true
+  },
+  {
+    "source": "knauf logo.webp",
+    "path": "assets/brands/knauf-india.webp",
+    "brand": "Knauf India",
+    "kind": "logo",
+    "width": 400,
+    "height": 260,
+    "bytes": 11994,
+    "used": false
+  },
+  {
+    "source": "knauf post 1.jpg",
+    "path": "assets/projects/knauf-india/sheetrock.webp",
+    "brand": "Knauf India",
+    "kind": "campaign",
+    "width": 800,
+    "height": 1000,
+    "bytes": 106104,
+    "used": true
+  },
+  {
+    "source": "knauf post 2.jpg",
+    "path": "assets/projects/knauf-india/aquapanel.webp",
+    "brand": "Knauf India",
+    "kind": "campaign",
+    "width": 800,
+    "height": 1000,
+    "bytes": 163806,
+    "used": true
+  },
+  {
+    "source": "knauf social post 0.png",
+    "path": "assets/projects/knauf-india/christmas.webp",
+    "brand": "Knauf India",
+    "kind": "campaign",
+    "width": 720,
+    "height": 900,
+    "bytes": 140096,
+    "used": true
+  },
+  {
+    "source": "kohinoor post 1.jpg",
+    "path": "assets/supporting-work/kohinoor/rare-treasure.webp",
+    "brand": "Kohinoor Dark Rum",
+    "kind": "campaign",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 210920,
+    "used": true
+  },
+  {
+    "source": "kohinoor post 2.jpg",
+    "path": "assets/supporting-work/kohinoor/beyond-the-menu.webp",
+    "brand": "Kohinoor Dark Rum",
+    "kind": "campaign",
+    "width": 1347,
+    "height": 1679,
+    "bytes": 218230,
+    "used": true
+  },
+  {
+    "source": "kslogo-ai.webp",
+    "path": "assets/brands/ksolves.webp",
+    "brand": "Ksolves",
+    "kind": "logo",
+    "width": 2560,
+    "height": 695,
+    "bytes": 55454,
+    "used": true
+  },
+  {
+    "source": "ksolves social media post 1.jpg",
+    "path": "assets/projects/ksolves/dashboard-ninja.jpg",
+    "brand": "Ksolves",
+    "kind": "campaign",
+    "width": 800,
+    "height": 1000,
+    "bytes": 67472,
+    "used": true
+  },
+  {
+    "source": "ksolves social media post 2.jpg",
+    "path": "assets/projects/ksolves/frappe-partner.jpg",
+    "brand": "Ksolves",
+    "kind": "campaign",
+    "width": 800,
+    "height": 1000,
+    "bytes": 65119,
+    "used": true
+  },
+  {
+    "source": "ksolves social media post 3.png",
+    "path": "assets/projects/ksolves/nifi-mcp.webp",
+    "brand": "Ksolves",
+    "kind": "campaign",
+    "width": 521,
+    "height": 647,
+    "bytes": 62872,
+    "used": true
+  },
+  {
+    "source": "ksolves webinar banner.webp",
+    "path": "assets/projects/ksolves/keda-webinar.webp",
+    "brand": "Ksolves",
+    "kind": "webinar",
+    "width": 1200,
+    "height": 627,
+    "bytes": 40218,
+    "used": true
+  },
+  {
+    "source": "magniclipper logo.png",
+    "path": "assets/brands/magniclipper.webp",
+    "brand": "MagniClipper",
+    "kind": "logo",
+    "width": 800,
+    "height": 561,
+    "bytes": 55338,
+    "used": true
+  },
+  {
+    "source": "magniclipper post 1.jpg",
+    "path": "assets/projects/magniclipper/launch-countdown.webp",
+    "brand": "MagniClipper",
+    "kind": "campaign",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 176078,
+    "used": true
+  },
+  {
+    "source": "magniclipper post 2.jpg",
+    "path": "assets/projects/magniclipper/launch-announcement.webp",
+    "brand": "MagniClipper",
+    "kind": "campaign",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 311696,
+    "used": true
+  },
+  {
+    "source": "mlc college.png",
+    "path": "assets/brands/mlc-college.png",
+    "brand": "MLC College",
+    "kind": "logo",
+    "width": 281,
+    "height": 72,
+    "bytes": 2581,
+    "used": true
+  },
+  {
+    "source": "pharmassist burn tablet.webp",
+    "path": "assets/projects/the-pharmassist/burn.webp",
+    "brand": "The Pharmassist",
+    "kind": "product",
+    "width": 1200,
+    "height": 960,
+    "bytes": 73068,
+    "used": true
+  },
+  {
+    "source": "pharmassist glow tablet.webp",
+    "path": "assets/projects/the-pharmassist/hair.webp",
+    "brand": "The Pharmassist",
+    "kind": "product",
+    "width": 1200,
+    "height": 960,
+    "bytes": 101824,
+    "used": true
+  },
+  {
+    "source": "pharmassist logo.svg",
+    "path": "assets/brands/the-pharmassist.svg",
+    "brand": "The Pharmassist",
+    "kind": "logo",
+    "width": 201,
+    "height": 44,
+    "bytes": 8710,
+    "used": true
+  },
+  {
+    "source": "pharmassist Multi tablet.webp",
+    "path": "assets/projects/the-pharmassist/multi.webp",
+    "brand": "The Pharmassist",
+    "kind": "product",
+    "width": 1200,
+    "height": 960,
+    "bytes": 91610,
+    "used": true
+  },
+  {
+    "source": "pharmassist product range.webp",
+    "path": "assets/projects/the-pharmassist/product-range.webp",
+    "brand": "The Pharmassist",
+    "kind": "product",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 132194,
+    "used": true
+  },
+  {
+    "source": "Sapsol-Logo-Icon.webp",
+    "path": "assets/brands/sapsol.webp",
+    "brand": "SAPSOL Technologies",
+    "kind": "logo",
+    "width": 2219,
+    "height": 2219,
+    "bytes": 64264,
+    "used": true
+  },
+  {
+    "source": "senior post 1.webp",
+    "path": "assets/supporting-work/senior-shield/groceries-to-goals.webp",
+    "brand": "Senior Shield",
+    "kind": "campaign",
+    "width": 1170,
+    "height": 1463,
+    "bytes": 142666,
+    "used": true
+  },
+  {
+    "source": "senior post 2.jpg",
+    "path": "assets/supporting-work/senior-shield/boarding-call.webp",
+    "brand": "Senior Shield",
+    "kind": "campaign",
+    "width": 1170,
+    "height": 1463,
+    "bytes": 240470,
+    "used": true
+  },
+  {
+    "source": "Seniorshield-Logo-New.webp",
+    "path": "assets/brands/senior-shield.webp",
+    "brand": "Senior Shield",
+    "kind": "logo",
+    "width": 298,
+    "height": 89,
+    "bytes": 8278,
+    "used": true
+  },
+  {
+    "source": "serene post 1.jpg",
+    "path": "assets/supporting-work/serene-communities/celebrate.jpg",
+    "brand": "Serene Communities",
+    "kind": "campaign",
+    "width": 399,
+    "height": 501,
+    "bytes": 38717,
+    "used": true
+  },
+  {
+    "source": "serene post 2.jpg",
+    "path": "assets/supporting-work/serene-communities/connection.jpg",
+    "brand": "Serene Communities",
+    "kind": "campaign",
+    "width": 399,
+    "height": 501,
+    "bytes": 34231,
+    "used": true
+  },
+  {
+    "source": "serene.webp",
+    "path": "assets/brands/serene-communities.webp",
+    "brand": "Serene Communities",
+    "kind": "logo",
+    "width": 300,
+    "height": 55,
+    "bytes": 19066,
+    "used": true
+  },
+  {
+    "source": "surgery tours india logo.webp",
+    "path": "assets/brands/surgery-tours-india.webp",
+    "brand": "Surgery Tours India",
+    "kind": "logo",
+    "width": 350,
+    "height": 154,
+    "bytes": 15564,
+    "used": true
+  }
+]

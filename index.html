@@ -1,231 +1,1167 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="The Pharmassist case study by Sanat Singh: brand building, content strategy, audience growth and lead generation for a pharmacist-led wellness brand.">
-<title>Sanat Singh | The Pharmassist Case Study</title>
-<style>
-:root{--bg:#080808;--panel:#151515;--panel2:#1c1c1c;--text:#f5f5f4;--muted:#aaa;--red:#e50914;--line:#303030;--width:1200px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{width:min(var(--width),calc(100% - 48px));margin:auto}
-header{height:66px;position:sticky;top:0;z-index:10;background:#080808ed;border-bottom:1px solid #252525;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,2.5vw,42px)}
-.brand{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:800;letter-spacing:.13em}
-.brand-mark{width:13px;height:22px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)}
-nav{display:flex;align-items:center;gap:22px}nav a{font-size:11px;color:#ccc}nav a:hover{color:#fff}
-.menu{display:none;background:#111;border:1px solid #444;color:white;padding:7px 10px}
-.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 76% 38%,#762128 0,#321316 27%,#101010 65%)}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080808 0%,#080808bb 40%,transparent 100%),linear-gradient(0deg,#080808,transparent 42%)}
-.poster{position:absolute;right:15%;top:14%;width:220px;height:340px;background:linear-gradient(150deg,#485444,#111713 60%,#8c2028);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(3deg);box-shadow:0 20px 60px #0009}
-.poster small{font-size:8px;letter-spacing:.18em}.poster b{font-size:36px;line-height:.95;letter-spacing:-.06em}.poster em{font-style:normal;color:#ff626a}
-.hero-copy{position:relative;z-index:1;width:100%;max-width:none;margin:0;padding:56px clamp(20px,2.5vw,42px)}
-.eyebrow{margin:0 0 13px;color:#ff626a;font-size:9px;font-weight:bold;letter-spacing:.18em;text-transform:uppercase}
-h1{font-size:clamp(60px,10vw,118px);line-height:.82;letter-spacing:-.075em;margin:0 0 20px}
-.role{font-size:clamp(16px,2vw,22px);font-weight:bold;margin:0 0 10px}
-.hero p:not(.eyebrow):not(.role){max-width:560px;color:#ccc;font-size:13px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.button{display:inline-block;padding:11px 16px;border-radius:3px;background:#eee;color:#111;font-size:11px;font-weight:bold}
-.button.red{background:var(--red);color:white}
-.hero-meta{display:flex;gap:13px;color:#aaa;font-size:9px;letter-spacing:.1em;margin-top:22px}
-.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:#151515;border:1px solid #292929;margin-top:-1px}
-.stat{padding:18px 20px;border-right:1px solid #303030}.stat:last-of-type{border:0}
-.stat b{display:block;font-size:25px}.stat span{color:#aaa;font-size:9px}
-.period{grid-column:1/-1;text-align:right;padding:0 16px 10px;color:#888;font-size:8px}
-section{scroll-margin-top:78px}.section{padding:66px 0 12px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
-.section-head h2,.case h2,.about h2{font-size:clamp(30px,4.5vw,48px);line-height:1;letter-spacing:-.05em;margin:0}
-.section-head h2 em,.about h2 em{font-style:normal;color:#aaa}
-.section-head>p{max-width:370px;color:#999;font-size:11px;margin:0}
-.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(245px,1fr);gap:13px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory}
-.tile{scroll-snap-align:start;transition:transform .2s}.tile:hover{transform:scale(1.025)}
-.cover{height:185px;position:relative;overflow:hidden;display:flex;align-items:end;padding:16px;background:radial-gradient(circle at 75% 18%,#477658,#173528 46%,#0d1711)}
-.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}.cover.has-image:after{z-index:1}.cover.has-image .cover-copy{z-index:2}
-.cover:before{content:"";position:absolute;width:240px;height:240px;border:1px solid #ffffff3d;border-radius:50%;right:-80px;top:-135px;box-shadow:0 0 0 28px #ffffff0b,0 0 0 55px #ffffff07}
-.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000b,transparent 75%)}
-.cover.ksolves>img{object-fit:contain;padding:24px;background:#fff;opacity:1;z-index:1}.cover.ksolves .cover-copy{z-index:2}.cover.knauf{background:radial-gradient(circle at 75% 18%,#baa6cf,#534161 46%,#211c27)}
-.cover.magni{background:radial-gradient(circle at 75% 18%,#e2a27b,#873c36 46%,#27191a)}
-.cover.guruji{background:radial-gradient(circle at 75% 18%,#c6a55a,#665027 46%,#211c12)}.cover.guruji.has-image{background:#faf8f2}.guruji-logo-crop{position:absolute;inset:0;overflow:hidden;background:#faf8f2;z-index:0}.guruji-logo-crop img{position:absolute;left:-58px;top:-82px;width:901px;height:341px;max-width:none;object-fit:initial;opacity:1}
-.cover-copy{position:relative;z-index:1}.cover small{font-size:8px;letter-spacing:.15em;color:#ddd}
-.cover b{display:block;font-size:31px;line-height:.98;letter-spacing:-.05em;margin-top:7px}.cover em{font-style:normal;color:#ff646a}
-.caption{display:flex;justify-content:space-between;gap:8px;padding:10px 2px 0;font-size:11px}
-.caption span{font-size:9px;color:#888}.tile p{font-size:10px;color:#aaa;margin:2px}
-.brands{border-block:1px solid #292929;margin-top:30px;padding:24px 0}
-.brand-list{display:flex;gap:10px;overflow:auto;white-space:nowrap;padding-top:8px}
-.brand-list span{background:#151515;border:1px solid #292929;padding:8px 12px;font-size:10px;color:#ccc}
-.case{padding:70px 0 14px;border-bottom:1px solid #292929}
-.case-top{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
-.case-art{min-height:280px;padding:22px;display:flex;align-items:end;background:radial-gradient(circle at 75% 18%,#477658,#173528 46%,#0d1711);position:relative;overflow:hidden}
-.case-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent 70%)}
-.case-art.has-image{align-items:center;justify-content:center;padding:10px;background:#fff}.case-art.has-image:after{display:none}.case-art.has-image img{display:block;position:relative;width:100%;height:100%;max-height:320px;object-fit:contain}.case-art.guruji.has-image{background:#372777}.portrait{min-height:230px;overflow:hidden;background:#111}.portrait img{display:block;width:100%;height:100%;min-height:230px;object-fit:cover;object-position:center 26%}.project-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0 8px}.project-gallery figure{margin:0;min-width:0;background:#111;border:1px solid #303030;padding:7px}.project-gallery img{display:block;width:100%;height:190px;object-fit:contain;background:#fff}.project-gallery figcaption{padding:6px 2px 0;color:#aaa;font-size:9px}
-.case-art.ksolves-art{background:#fff!important}.case-art.ksolves-art img{object-fit:contain;max-height:210px}.case-art.knauf{background:radial-gradient(circle at 75% 18%,#baa6cf,#534161 46%,#211c27)}
-.case-art.magni{background:radial-gradient(circle at 75% 18%,#e2a27b,#873c36 46%,#27191a)}
-.case-art.guruji{background:radial-gradient(circle at 75% 18%,#c6a55a,#665027 46%,#211c12)}.case-art.knauf.has-image{background:#fff}case-art.knauf.has-image img{position:relative;z-index:1;max-width:82%;max-height:170px;object-fit:contain}.case-art.guruji.has-image img{max-width:90%;max-height:245px;object-fit:contain;background:#fff;border-radius:8px}
-.case-art strong{position:relative;z-index:1;font-size:clamp(38px,6vw,66px);line-height:.95;letter-spacing:-.06em}
-.case-art em{font-style:normal;color:#ff646a}
-.case-copy h2{margin-bottom:12px}.case-copy>p:not(.eyebrow){font-size:12px;color:#aaa}
-.meta{display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid #333;padding-top:12px;margin-top:18px}
-.meta span{font-size:9px;color:#888}.meta b{display:block;color:#eee;font-size:10px}
-.company-marks{display:flex;align-items:center;gap:12px;margin:16px 0 2px}.company-marks a{display:grid;place-items:center;min-height:48px;padding:6px 12px;background:#fff;border:1px solid #ddd;border-radius:3px}.company-marks img{display:block;max-width:150px;max-height:38px;object-fit:contain}.company-marks a:first-child img{max-width:90px}.case-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.case-links a{display:inline-block;border:1px solid #3a3a3a;background:#111;padding:7px 10px;color:#ddd;font-size:9px}.case-links a:hover{border-color:#ff626a;color:#fff}\n.case-body{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0 36px}
-.case-body h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 7px}
-.case-body p,.case-body li{font-size:11px;color:#aaa}.case-body ul{padding-left:17px}
-.outcomes{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0}
-.outcomes div{border-left:2px solid var(--red);padding-left:9px}
-.outcomes b{display:block;font-size:22px}.outcomes span{font-size:8px;color:#999}
-.note{font-size:9px!important;color:#777!important}
-.resume{margin-top:64px;padding:34px;background:#111;border:1px solid #292929}
-.resume-top{display:flex;justify-content:space-between;align-items:start;gap:20px;border-bottom:1px solid #333;padding-bottom:18px}
-.resume-top h2{margin:0;font-size:38px;line-height:1}.resume-top p{font-size:10px;color:#aaa}
-.resume-grid{display:grid;grid-template-columns:1.55fr .8fr;gap:28px;padding-top:22px}
-.resume h3{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#ff626a}
-.job{border-top:1px solid #2e2e2e;padding:12px 0;break-inside:avoid}
-.job h4{font-size:13px;margin:0}.jobline{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:9px;color:#aaa}
-.job ul{padding-left:16px;font-size:10px;color:#bbb;margin:6px 0}.job li{margin:4px 0}
-.side h4{font-size:10px;margin:16px 0 4px}.side p,.side li{font-size:9px;color:#aaa}
-.side ul{padding-left:16px}
-.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;align-items:center;padding:70px 0}
-.initials{min-height:230px;background:linear-gradient(145deg,#562027,#151515 75%);display:grid;place-items:center;font-size:70px;font-weight:bold}
-.about p{max-width:650px;color:#aaa;font-size:12px}
-.contact{background:#141414;border-top:1px solid #292929;padding:45px 0}
-.contact-inner{display:flex;justify-content:space-between;align-items:end;gap:20px}
-.contact h2{font-size:clamp(36px,6vw,62px);line-height:.95;margin:0}
-.contact p{font-size:11px;color:#aaa}.contact-links{display:flex;gap:9px;flex-wrap:wrap}
-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:20px 0 28px;color:#777;font-size:9px}
-footer a{color:#aaa;margin-left:12px}
-@media(max-width:720px){
-.wrap{width:calc(100% - 32px)}header{padding:0 16px}.menu{display:block}
-nav{display:none;position:absolute;top:65px;left:0;right:0;padding:15px 18px;background:#111;flex-direction:column;align-items:stretch;border-bottom:1px solid #333}
-nav.open{display:flex}nav a{font-size:13px}
-.hero{min-height:530px}.hero:before{background:linear-gradient(90deg,#080808ee,#08080888),linear-gradient(0deg,#080808,transparent 70%)}
-.poster{right:6%;top:13%;width:145px;height:220px;opacity:.65}.poster b{font-size:25px}
-.hero-copy{padding:90px 16px 50px}.hero h1{font-size:clamp(57px,16vw,82px)}
-.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.stat:nth-of-type(2){border-right:0}
-.section{padding-top:50px}.section-head{display:block}.section-head>p{margin-top:12px}
-.rail{grid-auto-columns:minmax(230px,78vw)}
-.case-top,.case-body,.resume-grid,.about{grid-template-columns:1fr}.project-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.project-gallery img{height:170px}
-.case{padding-top:52px}.case-art{min-height:220px}
-.resume{padding:20px 16px}.resume-top{display:block}
-.initials{min-height:170px}.contact-inner{display:block}.contact-links{margin-top:20px}
-}
-@media print{
-body{background:white!important;color:#111!important;font-size:10pt}
-body>*{display:none!important}main{display:block!important}
-main>*{display:none!important}#resume{display:block!important;margin:0!important;padding:0!important;border:0!important;background:white!important;color:#111!important;width:100%!important}
-#resume *{color:#111!important;background:transparent!important}
-#resume .resume-top{border-color:#aaa}#resume .resume-grid{grid-template-columns:1.5fr .8fr}
-#resume h3{color:#a00000!important}.job{border-color:#ccc}
-#resume button{display:none!important}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
-
-/* The Pharmassist case study */
-.pharmassist-cover{background:#fff;align-items:center;justify-content:center}.cover.pharmassist-cover:after{background:none}.pharmassist-cover .cover-copy{z-index:2}.pharmassist-mark{position:absolute;inset:18px;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:#fff;color:#241b36;z-index:1}.pharmassist-mark>span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#5c3c9a;color:white;font-size:28px;line-height:1;font-weight:700}.pharmassist-mark strong{font-size:clamp(21px,3vw,32px);line-height:.95;letter-spacing:-.06em}.pharmassist-mark-large{inset:20px;gap:16px}.pharmassist-mark-large>span{width:56px;height:56px;font-size:44px}.pharmassist-mark-large strong{font-size:clamp(36px,5vw,60px)}.pharmassist-art{background:radial-gradient(circle at 75% 18%,#a38ae0,#3c2b75 50%,#14101f)!important;height:100%;min-height:280px;align-items:center;justify-content:center}.pharmassist-art:after{display:none}.pharmassist-tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}.pharmassist-tags span{border:1px solid #51475e;color:#ddd;padding:6px 9px;font-size:9px;letter-spacing:.04em}.pharmassist-at-a-glance{padding:28px 0 12px;border-bottom:1px solid #292929}.pharmassist-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#302a38;border:1px solid #302a38}.pharmassist-stat{min-width:0;padding:17px 14px;background:#111}.pharmassist-stat b{display:block;font-size:clamp(22px,3vw,34px);line-height:1.1;letter-spacing:-.04em}.pharmassist-stat span{display:block;color:#aaa;font-size:9px;line-height:1.45;margin-top:8px}.pharmassist-note{font-size:9px;color:#777;line-height:1.6;margin:12px 0}.pharmassist-section{padding:44px 0 8px}.pharmassist-section h3,.pharmassist-lede{font-size:13px;color:#bbb;max-width:900px}.pharmassist-framework{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.pharmassist-framework article{padding:15px;border:1px solid #303030;background:#111;min-height:95px}.pharmassist-framework b,.pharmassist-framework span{display:block}.pharmassist-framework b{font-size:11px;margin-bottom:7px}.pharmassist-framework span{font-size:10px;color:#999}.pharmassist-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.pharmassist-gallery figure{margin:0;background:#111;border:1px solid #303030;padding:7px;min-width:0}.pharmassist-gallery img{display:block;width:100%;height:200px;object-fit:contain;background:#fff}.pharmassist-gallery figcaption{padding:7px 2px 2px;color:#aaa;font-size:9px}.pharmassist-channel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}.pharmassist-channel-link{min-height:170px}.pharmassist-channel-link{display:flex;flex-direction:column;justify-content:center;gap:12px;padding:24px;border:1px solid #383143;background:linear-gradient(145deg,#221a35,#111)}.pharmassist-channel-link b{font-size:20px;line-height:1.15}.pharmassist-channel-link>span:last-child{color:#999;font-size:10px}.pharmassist-impact{margin-top:12px;padding:30px 22px 12px;background:linear-gradient(120deg,#17131e,#111);border:1px solid #39313f}.pharmassist-proof{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-block:1px solid #38313e;margin-top:20px}.pharmassist-proof div{padding:14px 12px;border-right:1px solid #38313e}.pharmassist-proof div:last-child{border-right:0}.pharmassist-proof span,.pharmassist-proof b{display:block}.pharmassist-proof span{font-size:9px;color:#999}.pharmassist-proof b{font-size:11px;margin-top:8px}.pharmassist-close{padding:42px 0 18px}.pharmassist-close .button{margin-top:8px}
-@media(max-width:900px){.pharmassist-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.pharmassist-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-proof{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-proof div:nth-child(2n){border-right:0}.pharmassist-channel-grid{grid-template-columns:1fr}.pharmassist-framework{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:720px){.pharmassist-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.pharmassist-framework{grid-template-columns:1fr}.pharmassist-gallery img{height:150px}.pharmassist-impact{padding:22px 14px}.pharmassist-proof{grid-template-columns:1fr}.pharmassist-proof div{border-right:0;border-bottom:1px solid #38313e}.pharmassist-proof div:last-child{border-bottom:0}.pharmassist-case .case-top{gap:18px}.pharmassist-art{min-height:220px}}
-
-/* Project covers: blurred image first, readable headline on top, full image on hover/focus */
-.cover.has-image{position:relative;isolation:isolate;overflow:hidden}
-.cover.has-image>img{position:absolute!important;inset:-6px!important;display:block!important;width:calc(100% + 12px)!important;height:calc(100% + 12px)!important;max-width:none!important;object-fit:cover!important;opacity:1!important;filter:blur(5px) brightness(.5)!important;transform:none!important;z-index:0!important;transition:filter .28s ease,transform .28s ease,opacity .28s ease!important}
-.cover.has-image:after{content:"";position:absolute;inset:0;display:block;background:linear-gradient(0deg,rgba(8,8,8,.82),rgba(8,8,8,.28) 72%,rgba(8,8,8,.12))!important;z-index:1!important;pointer-events:none}
-.cover.has-image .cover-copy{position:relative;z-index:2!important;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.75)}
-.cover.has-image .cover-copy small{color:#fff}
-.tile:hover .cover.has-image>img,.tile:focus-visible .cover.has-image>img,.tile:focus-within .cover.has-image>img{filter:blur(0) brightness(.9)!important;transform:scale(1.025)!important;opacity:1!important}
-.tile:hover .cover.has-image:after,.tile:focus-visible .cover.has-image:after,.tile:focus-within .cover.has-image:after{background:linear-gradient(0deg,rgba(8,8,8,.66),rgba(8,8,8,.16) 72%,rgba(8,8,8,.04))!important}
-.cover.pharmassist-cover{background:#fff!important;align-items:flex-end;justify-content:flex-start;padding:16px!important}
-.cover.pharmassist-cover>img.pharmassist-logo{inset:0!important;width:100%!important;height:100%!important;padding:10px!important;object-fit:contain!important;background:#fff!important;filter:blur(3px) brightness(.82)!important;transform:none!important;opacity:1!important;z-index:0!important}
-.cover.pharmassist-cover:after{background:rgba(255,255,255,.28)!important;z-index:1!important}
-.cover.pharmassist-cover .cover-copy{color:#19151f;text-shadow:none}
-.cover.pharmassist-cover .cover-copy small{color:#4b4552}
-.cover.pharmassist-cover .cover-copy em{color:#e8327c}
-.tile:hover .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-visible .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-within .cover.pharmassist-cover>img.pharmassist-logo{filter:blur(0) brightness(1)!important;transform:none!important}
-.tile:hover .cover.pharmassist-cover:after,.tile:focus-visible .cover.pharmassist-cover:after,.tile:focus-within .cover.pharmassist-cover:after{background:rgba(255,255,255,.12)!important}
-.cover.has-image .guruji-logo-crop{position:absolute;inset:0;z-index:0!important;overflow:hidden}
-.cover.has-image .guruji-logo-crop img{filter:blur(5px) brightness(.52)!important;transition:filter .28s ease,transform .28s ease!important}
-.tile:hover .cover.has-image .guruji-logo-crop img,.tile:focus-visible .cover.has-image .guruji-logo-crop img,.tile:focus-within .cover.has-image .guruji-logo-crop img{filter:blur(0) brightness(.9)!important;transform:scale(1.025)!important}
-@media(prefers-reduced-motion:reduce){.cover.has-image>img,.cover.has-image .guruji-logo-crop img{transition:none!important}}
-
-/* The Pharmassist uses the portfolio's charcoal, white, and red palette */
-.cover.pharmassist-cover{background:#101010 url("assets/the-pharmassist-hero.png") center/cover no-repeat!important;align-items:flex-end!important;justify-content:flex-start!important;padding:16px!important}
-.cover.pharmassist-cover>img.pharmassist-logo{position:absolute!important;inset:16px 16px auto!important;width:calc(100% - 32px)!important;height:66px!important;max-width:none!important;max-height:none!important;padding:9px!important;object-fit:contain!important;background:#fff!important;filter:blur(3px) brightness(.88)!important;opacity:1!important;z-index:0!important}
-.cover.pharmassist-cover:after{display:block!important;background:linear-gradient(0deg,rgba(8,8,8,.88),rgba(8,8,8,.24) 72%,rgba(8,8,8,.08))!important;z-index:1!important}
-.cover.pharmassist-cover .cover-copy{position:relative;z-index:2!important;color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.75)!important}
-.cover.pharmassist-cover .cover-copy small{color:#fff!important}
-.cover.pharmassist-cover .cover-copy em{color:#e50914!important}
-.tile:hover .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-visible .cover.pharmassist-cover>img.pharmassist-logo,.tile:focus-within .cover.pharmassist-cover>img.pharmassist-logo{filter:blur(0) brightness(1)!important}
-.pharmassist-art{position:relative;isolation:isolate;background:#101010 url("assets/the-pharmassist-hero.png") center/cover no-repeat!important;align-items:center!important;justify-content:center!important;padding:22px!important;min-height:280px}
-.pharmassist-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.42),rgba(8,8,8,.06) 72%);z-index:0}
-.pharmassist-art:after{display:block!important;background:linear-gradient(0deg,rgba(8,8,8,.32),transparent 72%)!important;z-index:1}
-.pharmassist-art>.pharmassist-logo{position:relative!important;inset:auto!important;z-index:2!important;display:block;width:min(82%,430px)!important;height:auto!important;max-width:none!important;max-height:190px!important;object-fit:contain!important;padding:18px 22px!important;background:#fff!important;border-radius:4px;opacity:1!important;filter:none!important;transform:none!important;box-shadow:0 18px 48px rgba(0,0,0,.35)}
-.pharmassist-tags span{border:1px solid rgba(229,9,20,.65)!important;color:#fff!important;background:rgba(229,9,20,.08)}
-.pharmassist-stats{background:#e50914!important;border-color:#e50914!important}
-.pharmassist-stat{background:#111!important}
-.pharmassist-stat b{color:#fff}
-.pharmassist-stat span{color:#d2d2d2!important}
-.pharmassist-note{color:#aaa!important}
-.pharmassist-section h3,.pharmassist-lede{color:#ddd!important}
-.pharmassist-framework article{border-color:#383838!important;background:#111!important}
-.pharmassist-framework b{color:#fff}
-.pharmassist-framework span{color:#b8b8b8!important}
-.pharmassist-gallery figure{border-color:#383838!important;background:#111!important}
-.pharmassist-channel-link{border-color:rgba(229,9,20,.5)!important;background:linear-gradient(145deg,#271314,#111)!important}
-.pharmassist-channel-link>span:last-child{color:#bbb!important}
-.pharmassist-impact{background:linear-gradient(120deg,#1b1011,#111)!important;border-color:rgba(229,9,20,.55)!important}
-.pharmassist-proof{border-color:#444!important}
-.pharmassist-proof div{border-color:#444!important}
-.pharmassist-proof span{color:#bbb!important}
-.pharmassist-proof b{color:#fff}
-@media(max-width:720px){.pharmassist-art{min-height:220px!important}}
-</style>
-</head>
-<body>
-<header><a class="brand" href="#home"><span class="brand-mark"></span>SANAT SINGH</a><button class="menu" id="menu" aria-expanded="false">Menu</button><nav id="nav"><a href="#home">Home</a><a href="#work">Selected Work</a><a href="#pharmassist">The Pharmassist</a><a href="#ksolves">Ksolves</a><a href="#about">About</a><a href="#resume">Résumé</a><a href="#contact">Contact</a></nav></header>
-<main id="home">
-<section class="hero"><div class="poster" aria-hidden="true"><small>BRAND · CONTENT · SOCIAL</small><b>MAKE<br>THE<br><em>MESSAGE</em><br>MATTER.</b><small>INSIGHT → IDEAS → IMPACT</small></div><div class="wrap hero-copy"><p class="eyebrow">NORTH AMERICAN MARKET · SOCIAL STRATEGY · EXPERIENCE ACROSS CANADA &amp; INDIA</p><h1>SANAT<br>SINGH</h1><p class="role">Brand, Content &amp; Social Media Strategist</p><p>With experience across Canada and India, I build audience-first social stories for Canadian and North American brands, from B2B technology and financial services to product launches and campaigns.</p><div class="actions"><a class="button red" href="#work">▶ &nbsp; Explore my work</a><a class="button" href="#resume">＋ &nbsp; View résumé</a></div><div class="hero-meta">EXPERIENCE ACROSS CANADA &amp; INDIA · NORTH AMERICAN MARKET</div></div></section>
-<section class="wrap stats pharmassist-hero-stats" aria-label="The Pharmassist audience figures"><div class="stat"><b>427K</b><span>Instagram followers · brand account</span></div><div class="stat"><b>398K</b><span>Instagram followers · founder account</span></div><div class="stat"><b>478K</b><span>YouTube subscribers</span></div><div class="stat"><b>14.69M</b><span>YouTube lifetime views</span></div><div class="stat"><b>224</b><span>YouTube videos</span></div></section>
-<section class="section wrap" id="work"><div class="section-head"><div><p class="eyebrow">SELECTED WORK / 01–05</p><h2>Featured projects.<br><em>Press play.</em></h2></div><p>Experience across Canada, North America and India. The Pharmassist leads as case study 01, followed by Ksolves and the rest of the portfolio.</p></div><div class="rail">
-<a class="tile" href="#pharmassist"><div class="cover pharmassist-cover has-image"><img class="pharmassist-logo" src="data:image/png;base64,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" alt="The Pharmassist logo"><div class="cover-copy"><small>01 · FLAGSHIP · WELLNESS</small><b>Building a<br><em>wellness brand.</em></b></div></div><div class="caption"><strong>The Pharmassist</strong><span>Brand · Content · Growth</span></div><p>Connecting pharmacist-led content, audience and acquisition.</p></a>
-<a class="tile" href="#ksolves"><div class="cover ksolves has-image"><img src="https://www.ksolves.com/wp-content/uploads/2026/03/kslogo-ai.webp" alt=""><div class="cover-copy"><small>02 · B2B · AI-FIRST</small><b>AI First.<br><em>Always.</em></b></div></div><div class="caption"><strong>Ksolves</strong><span>2025–26</span></div><p>Turning a new brand position into a consistent LinkedIn story.</p></a>
-
-<a class="tile" href="#magni"><div class="cover magni has-image"><img src="assets/magniclipper-product.png" alt=""><div class="cover-copy"><small>03 · CANADIAN PRODUCT · PRE-LAUNCH</small><b>Make the<br><em>first move.</em></b></div></div><div class="caption"><strong>MagniClipper</strong><span>Sapsol × CGX</span></div><p>Pre-launch marketing that generated 2,000+ sign-ups.</p></a>
-<a class="tile" href="#knauf"><div class="cover knauf"><div class="cover-copy"><small>04 · INDIA · AUDIENCE · STORY</small><b>Know who<br><em>you're for.</em></b></div></div><div class="caption"><strong>Knauf India</strong><span>Team project</span></div><p>Content strategy, Thundersteel storytelling, paid campaigns and day-to-day social.</p></a>
-<a class="tile" href="#guruji"><div class="cover guruji has-image"><div class="guruji-logo-crop"><img src="assets/guruji-instagram.png" alt="Guruji Astro logo from its Instagram profile"></div><div class="cover-copy"><small>05 · VIDEO · COMMUNITY</small><b>500 to<br><em>2,000.</em></b></div></div><div class="caption"><strong>Guruji Astro</strong><span>2022–23</span></div><p>YouTube growth through audience-focused content strategy.</p></a>
-</div><div class="brands"><p class="eyebrow">CANADIAN EXPERIENCE · MORE BRANDS, MORE CONTEXTS</p><div class="brand-list"><span>Sapsol Technologies · Canada</span><span>CGX Medical · Canada</span><span>MLC College · Canada</span><span>STEM Montessori Academy of Canada</span><span>HCLTech · ORM</span><span>Kohinoor Indian Rum</span><span>Senior Shield</span><span>Serene Communities</span></div></div></section>
-<section class="case wrap pharmassist-case" id="pharmassist">
-<div class="case-top"><div class="case-art pharmassist-art"><img class="pharmassist-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAAAsCAYAAADPT5w0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAEmtJREFUeJztnXl0VFWawH9fVRGKBA1urY0gQlJhFUQRWxHUQXsAl2ZUHG2PjjI2OC4okqTRPoppXCAV3FpttxmXsWUUHZZ2QbtF7EYPOoi7QBJAwAXcIoJJIFXvmz9uVerVe6+WBALa5/3OqVOnvnvffd+r9767fPe79wnQAHQjP65T1Vki0gDUqerwPI/z8fnJEgIWAEU22T7AGOAz4I2ELAx0AT6x5dM9oJ+Pz14npKqX2AUi0g9jJG+q6rkZjpMO18zH50dCoJ3HpbUiIhIUka75Hiwi+7XzvD4+e5z2GokAiMjhIrIAaAK2icgWEXlARIpdB4gMEpH5ItIEfCsizSKyWERGtF99H5+OJ+QhS3alco059geWATuB/0x8jwEmAQNFZJSqWgAiMhJ4EegMzAM+BnoCvwaWisj5qvrMLl6Lj0+H4GUk+SBAKfAKMF5VtwOISBdgMTAKGAc8JyIFwJ8wrdZIVV3eWojILOAt4EER+Yuqbm33lfj4dBBe3a18WxIFrkoaCICqNgEzEz9HJ75Pw7Qa99sNJJF/PXAHsB9wZttU9/HZM7S3JQHYoqqrPOQfJb67J76TcykjRORpj/zJfEfsgi4+Ph3GrnS3NmVI+z7xXZD43teW5uXVUuBt4Ot26uLj06G0d+AuQCxLmv345MM/S1Xnt009H5+9T3tdwPmQNJK/Jb7HeWUSkStEZIWIHN2Buvj4tJtdmifJM20JsAKYKCIXpmUUORa4BTgAeLeduvj4dCi76t3Kma6qCpwHbAAeF5EPRGSuiCzFxIYJcJaqxvPW2sdnD+JlJNuBvwIfZDnuHWBNhrQ4ZiC+LilQ1bXAUOAGoBE4CTgE+CPQT1XfaaviPj57CjEVvY/Pj4BBVQV8NKMFTfRSBlUV8OGMnXtZK99IfH4kRGpmgV6LmUK4AbgIOBZ4g3jL2ay7fsveUs03Ep+9T2l0BMKyzBnkPurKr9hzCqXTkS5gH5/8ED18l9I7mNbJRBE5AZiS53ENmBn3ZcDrqtrilUlEDgBudYg/VtW72qGrzz8qIet1YsEYGSNAdOmeVMdJa3dLRC4AnmhHGZuA2cB96ui7iUhvbF6uBItVdWw7zuPzj4wZk/zWI+VjCmU475X/sNvPOaSmiO9iBWmyjSXfoxPSpiPs3a32LsntCdwDPJ8IlffxaTv1vX6H8mi6UOqJB8Z1iIEANOojFAS/Tfv0WTfAmS3vMUn37t2ZMGECI0eOzJRlLPDfeRTlewp83OiEOPUVlyByNdCMMJ9Y6BjWTduwt1XLFQXcAmwBmDlzZreJEyd2jcfjhMPhplgs5tVqnC0ip6nq84nf/oYRPm2jtvxuBt3xBB9O/bbjTybiqrMl6KrEc3W3OgE9gB6WZXUFCAaD5OhWXZ1DM78l8cnOHjGQ/MnakoTDYV566SWKioro1atXq3z58uWoKjfffDMLFixwHnaiiBSqamOukyeM7XjMwisBvgCWq+q2fC9ARELAYMyirQMwhv0dxmGwQlUbshx7INDLIX7XHkcmIgcBBwNfq+pmEekB9LPlb1LV1235y4BBwIGYEJ+3VdUzhCdR9tGYEB0rofNbqrp3Zpl739mNgpYjsPRgEMHiB0KBddQeVucczGZlSE0RjdYRSOAA0DAiWyG2jtrp61tn0zMd5xxIFxQ1UnfVjozHlMwuJiR9IbAvMUvRwFe0BOvYNLXJM/+hVYWEOnc2ZQcL3Bni+9JrVmrdU58d2+xG4mpJiouLGTVqlKuYo446CoAjjzzSy0gKMK1PrVeZ0GocVcBlmM3w7OwUkT8B01X1S6/jE2V0A64DLgZ+liFbi4g8D/xOVT/2SP8X4EGHbKCI1AKVCf16JuTTMV680zExZ0maRWRfYAhwN3Cch66vA5eoal3idwlm2fJY3BXVVyJyC3C301voSc87uhCOjUQZjDF6QL9HWEOsZVleM9Vl1WdhyTWEOAELab1tAcCyoPSTrUSiC1GJUl/+YcZySueMRaxrgNEgQZLqqwJBKI1+Q4T5iN5ObaV7VWujPkBB8II0mey4DHggXTYvSMmGiYhOIhA42uisEBBAIRiLEYm+CfIIPX54jFdnpNY+dSm8HWFyxmuQwOvYTefTouOztiRbt25lyZIlFBcX06tXLw480NyDlStXoqqsXLky06H7ZkrAGMUS4BcZ0guAS4BTReREVXW6kEmsPVlEaulvJjoB44FxInKex6IvLyMeAtwJnJqhTOcxYaAcuAnwqJkAGAG8JSJHASXAfCDTPmUHJc7fD/iPDHlg0B370xy7kTATgX2MVjabUiDYKUak+n+BadRVfuouo6qA5sJHETk/x+ixGLgI0QuIRH9PfcXMtBbh5KoQnxY+gDAxaymmpb8UlYuJRGdQX3Fb1pbFi/63HUBpp0Wgx2fJFQJGgI7gs8Ip9KsZz+ry9QAEkLZ2+LN6t5qbmxk9ejTDhg1j4cKFrfLhw4czbNgwFi1alOnQr7IUO5LMBmKnB/CMiKTpKCI9MTuy5DIQOwXAk4kaPBdzyGwgmbiVzAaSpBvwNGZLpXw28rtMRMZ7ppREI+yIrUC4GndLbCcEci7ICvpV93Wl7iysQTg/D12SBIEqItXladJNRbdCTgNx6MUtlESnOeRuU7VsralUBWgJzc9hIOkog4npkrQuVJuwNO95klgs1vqdoxfQgNlHOFeZFvAa8DBmP+LtHnmGYrpEdm7C9PftfIBZs9I/8bkYs37FThjThbLjpd/PM+ibT/2zCXgM01J4dRWHkdqcPI5pUR8DMjXJTn1N7R9gPtDbkdICUg9sxPy3dg4mLo8htuuNVPdAccZDNYBMRRiKxiPASaAP4bx2lSr6zjH3oM+tByM61VHONuA60OMIBPoj+kuQR1zlCDOJ3HZQhmt3U1p0BoJzDmI1yKWoNQLlBOBy0FrHeQ6nU+i6vM/jIO+NIG666SaeeeYZGhoasCznPUjjBVXNtP49yTfA6Y49uLpj1rH0d+SdADybyBMAznGkf47Zz8u+Z9dqEVmO2bklaJOPyaFXEk2c86lE+TvIbfhPAP+eHHSLyD7Aq5iBuZPvgDGq+mZSICITMZv82fmFiOyvqilvz46ic0EHOrR9lGCggjXTzH4CkWgJ8D8Yo0xyLH2qj4bKFYkTnoI6ehLCFdSWz7VJ6oHXiES/Aq63ybug8TOARwiGTsH5HAlTqK141CZZDfyFSPQLRzlh6HRm63Vrmhm7UR3rSI+hciL15fYK6XX63/Y0sdB7wKEpnfQ8oJIfGqcS6jwdgILg45gxpv0kx7HTSjlaHAP3rGzevJnNmzfnyhbDHavlxVUee3B9LiKXYx4sO/amNQSc7Ujf4rWpnaquSQzA7UZ3qIgE81gFeb2qzsqRJ00HYLLdK6Wq20SkCjN2cnKD3UASPAJcC9gNQDCt6SspkQ4kPdTna9Yefmma96muYi0lcy4nYL2VdgaR4zBLqcHiQPcDqa7taY1Y7gJNb5mt5KI88XCaSOe8yyHutS2VvSxbd4uDHYnelfGq676hLHoZ6qhMZF4QndGIWfgHZdEWV/9A2MqG6Wke0azerXYw3eFF8ipzG6Zf7sVrwA+kvwri5yIiatiJaW1SJxDZX0ROxnTBikkfZ4Ud5Qcxr5Dw6tolWQ9UZ0n34q8ZXN6Zwr9dhqOqKiLLSDcScHYt6yquw3j1srMz8CFhV4ufeqBFv3DdHpX7KIueg6VvIKwB1rLTWsOG6V/i9gImj/nC/hwnLuaPRKLjUVmGaC2wlkJZk6jxvcvJB+FLx0MdRvRDIjVPIdZKROppaall3fVbqK14Dngua3nq8Xx6TCbuyuZ0dnZiat85eeRdl6k7lnhQNpE+DxHCeMtaWwsRCWI8YJOAY9qoq/1P8DLiZck9jDPgdcxazxOpNiQ2CLdPvjYDbk+T4XMPmbenUKoClBaNAj0dZQjCIUBha3rY6wGQVNczVvA8oZatmIqlNQfKaERGt0oKghCJfomwAouFNDU+wWczUhWCxl9EAu5yYAyiqe5to0IkuhF4B9GFtDTNZf2M5jT9AiqoQ22xDYCVZzH33M5BoFeikvToQSTaALIKdClBfZzVlZmWmufFrgY4bgceB4ZmMBCvMj/zkNnxmm21h/R3w3TJHqLtBpIPmR7gVhU8ZN97yJI4K4TtWYzQq/Jwny8yZwCRwuWgrwLTEE7BTGD2sX2cA3vA9sCtv+Y7NHA+pmXPxc9QxiE8QGFhHX2jqcHz2t9uxeLXmB5ALg4DfoXKfxEqrKU02rY3CtRVvIyZX8rFfgkP2PXE5WPKoncz7MFObTqXjVwBjhuByY7PJOAszPal+6nqv2WYqMtErkG910Nor/0fAZeHA0yc2aeY/nry4zVTm6sl6ZiI0/aT3vz3n3U4WH9Dd0MFUT/tRULxwcC9eHvjvOiOxXP0q0kZ4dqKF4AhCA/iXcl50RPh+bRy8qGu4lqQM1H+jtuL50UA5Sq2br3NI82jtY1n7W55PTBfqWr7+5C7L8BRAURkMGZy0M4OjPE+6Vz8JSLvk32P4fbol8uId8c5MtMSvBXhAId0McLDIJ9iiamExOoKLE3XxMN3v2r6J8CVSNUU+naJYMkgkAGo9sW8OWAI7rHdvlh6OVDRKqmrWAtMRuZdTu8NAwkwANEjQMrAKgEZhJnctVNM3LoSMPMlKh7/lXPAA9SV/xn4s3Efh4aaaAP6I1KGan9w/T8AV9Br1i3OQXk+7K4xSVvINd+Q7aH6Jw/Zvar6mKsQE/pS2o7z780AzOwGJVUBSgt/5ZC+RX3jaeiM9Fq1rOZYss1n9a0eTjyY8oiVdm1i9bSPMVtFPdsq710VJlRYiQkjSqGY2KTI7IFoKGVEpTRRV/4+8D7GDW0YUlNEo1YCNzouKr+dO2VekLK16XF2O6WBDRUvAy+n8iGURodilm3Y14aE6dzpCFI7iubNT2WNe/JuOycRIXM34QrSB8xJvN2Tu0ZbWpK2GmEqf1nX/bEPzk3p77oMBED1X90y28A9LjWItaL1g/U2kT+4nQTrZzRD+E6X3Lx3Bgjc4yqnZLbblfxe+Q8USjXu67fdD+eo3VwIAEc3BLCCq7GCa1s/BcFH3dlR6ipWgj7uSrOsQlduJ/GAazI518B9V2vV3V2mV7jLZBHp03pCkc4iMpXM8zVzReTSLPrlYu+tkdm5fTuu2W9Oo/T2nq2/T64KURa9Gs8lC3IOZTVTGFTVFdEljsQwND9FaY173kObfuOSWZoIdJSlrnICMpf+t7m7PI16Ee7/L7/x7IpJLSjLHdIzKKuZ7JqC7HlHF1ROc5XRKb7aIfGYCtB7KauZQml0EqXRSfSZ02tvdLdyke0hfAnzkNjz9AbWiMgqzLsbB5CKjdqOO05qDKZv/HCGc/x417usn9FMpPrvIPbQ7EOReK2JeqUJCodC66Sbw/2spSh30RRegCX3E+IqzGv9koxBdAOl0WWIbALtDByDSMShSRzhIQBi+gAhpqSXI2OJhTYSqX4NlY0IXTCTos7xoZUIe8kP0RoQu9NGUL2f0ug1lLIc5CuEQwjrqZjlB3aWJMZfdj7CzQBU72p9woI6fm+0JO0hua/waownxkkIcwOGkzKKOCakxWuSb3cbwu7qbuW+BxKoxMy12AkDJ2IqgKSBbAHNHBK+vmIzcD7u/ydsXMp6Ceadlk4DAWW66dIkylEuwBiknUKQsYmw9IvwdqBUUVdpax08Bu52Z0Nd5SLQ2z3K6YdwMaIVoBfiNpAvcc+vQDwwF28PqI30AMc9xa4+oFcDszAu30x8jYkNW0x2v/pPq7sFUFv+JhL4Z6AuS64VwAjqez+ZcJWmI53MPaireBmCJ4CrG5OJz1DOo76iJk1aX7EYS0ch/F+e5XyJ6ETqKn6fZ/4UdZXTgMsxgbT58BpwfML7ls66aRtAf4OZDM+IfUuhY3DHRX2qqvfkqYy7cLPv1qUOcW22l/mIyBWkFjoluUlVmx35emBaimMxNYdionCXAk/b3+UoIqdgYsCSAW+rVPVOMbFMTm/RYtXM+zyJyEngCi9/WlVf8ciOiPyB9DD6bapaniHvOA99HrevfExlnhekbMPJWDoS6GFqYWsjAXmF2oplres0ZF6Qkk9OJUBfVI0XKsh9rK5Mn0TsWz0cKzAedBjm/++GaWW2IHyAJYuRzi9kXSUoCH1mjyAQGI8J7DwM83azRpCvQd9D5CW6sNBzB5RIzbWgjmUUch915UtdeUtmFxMIngPWL0EGY1rQIkzw6CcIbyLMY02Fu5JwnTdaAnohIoOxHEsPRG78fySmO+e8xWgCAAAAAElFTkSuQmCC" alt="The Pharmassist logo"></div><div class="case-copy"><p class="eyebrow">CASE 01 · FLAGSHIP CASE STUDY · BRAND BUILDING</p><h2>The Pharmassist:<br>Building a wellness brand through content, audience and acquisition.</h2><p>A pharmacist-led brand combining educational content, founder-led communication and digital marketing to connect audiences with health and wellness products.</p><div class="pharmassist-tags"><span>Brand Strategy</span><span>Content</span><span>Social Media</span><span>Audience Growth</span><span>Lead Generation</span></div><div class="meta"><span><b>BRAND</b>The Pharmassist</span><span><b>CATEGORY</b>Health &amp; wellness</span><span><b>WEBSITE</b><a href="https://www.thepharmassist.in/" target="_blank" rel="noreferrer">thepharmassist.in ↗</a></span></div><div class="case-links"><a href="https://www.thepharmassist.in/" target="_blank" rel="noreferrer">Website ↗</a><a href="https://www.instagram.com/thepharmassistindia/" target="_blank" rel="noreferrer">Brand Instagram ↗</a><a href="https://www.instagram.com/manisharora_health/" target="_blank" rel="noreferrer">Founder Instagram ↗</a><a href="https://www.youtube.com/@thepharmassist4367" target="_blank" rel="noreferrer">YouTube channel ↗</a></div></div></div>
-<div class="pharmassist-at-a-glance"><p class="eyebrow">AT A GLANCE · AUDIENCE</p><div class="pharmassist-stats" aria-label="The Pharmassist audience figures"><div class="pharmassist-stat"><b>427K</b><span>Instagram followers<br>Brand account</span></div><div class="pharmassist-stat"><b>398K</b><span>Instagram followers<br>Founder account</span></div><div class="pharmassist-stat"><b>478K</b><span>YouTube subscribers</span></div><div class="pharmassist-stat"><b>14.69M</b><span>YouTube lifetime views</span></div><div class="pharmassist-stat"><b>224</b><span>YouTube videos</span></div></div></div>
-<div class="pharmassist-section"><p class="eyebrow">THE BRAND</p><h3>Pharmacist-led communication, a founder people recognize, and a direct-to-consumer product range.</h3><p class="pharmassist-lede">The Pharmassist presents itself as a pharmacist-led wellness brand. Its website pairs founder-led communication with educational content and a direct-to-consumer store spanning hair, weight management, wellness, energy and vitality products. That gives the brand a natural bridge from learning and trust to product discovery and purchase.</p><p class="pharmassist-note">Product categories and founder details are drawn from the brand website. Brand statements about product benefits remain brand claims; this case study does not add medical efficacy or regulatory claims.</p></div>
-<div class="pharmassist-section"><p class="eyebrow">THE STRATEGY</p><h3>Build one connected brand, from pharmacist-led education to product discovery.</h3><p class="pharmassist-lede">The brand brings pharmacist expertise, founder-led communication and a consumer wellness portfolio together under a recognizable identity. The work connects what the brand says, how it looks, what it offers and how people discover it online.</p><div class="pharmassist-framework"><article><b>Brand platform</b><span>Built the pharmacist-led positioning and approachable wellness voice that anchor the brand.</span></article><article><b>Visual identity</b><span>Defined the color direction and visual language, then carried that identity across brand touchpoints.</span></article><article><b>Product direction</b><span>Shaped the product portfolio and how the offers fit within the wider wellness brand.</span></article><article><b>Content strategy</b><span>Connected useful education, founder communication and product storytelling in a coherent content system.</span></article><article><b>Channel strategy</b><span>Built the brand presence across Instagram, YouTube and the direct-to-consumer website.</span></article><article><b>Audience to acquisition</b><span>Designed the brand experience to move from discovery and interest toward product exploration and lead generation.</span></article></div></div>
-<div class="pharmassist-section"><p class="eyebrow">CONTENT &amp; EXECUTION</p><h3>Real brand and product visuals, with channel examples linked to their source.</h3><div class="pharmassist-gallery"><figure><img src="https://www.thepharmassist.in/cdn/shop/files/Multi.png?v=1783191358&amp;width=1200" alt="The Pharmassist product range visual"><figcaption>Product portfolio visual · Official website</figcaption></figure><figure><img src="https://www.thepharmassist.in/cdn/shop/files/Burn_cb009919-443b-420c-bc0c-c7356047fe81.png?v=1783191476&amp;width=1200" alt="The Pharmassist Burn product visual"><figcaption>Product storytelling · Burn range</figcaption></figure><figure><img src="https://www.thepharmassist.in/cdn/shop/files/Shilajit_5543bb3d-fb90-4a20-b048-302f5e820540.png?v=1783191600&amp;width=1200" alt="The Pharmassist Shilajit product visual"><figcaption>Product storytelling · Shilajit range</figcaption></figure></div><div class="pharmassist-channel-grid">
-<a class="pharmassist-channel-link" href="https://www.instagram.com/thepharmassistindia/" target="_blank" rel="noreferrer"><span class="eyebrow">INSTAGRAM · BRAND ACCOUNT</span><b>Open The Pharmassist ↗</b><span>Official brand profile and content source.</span></a>
-<a class="pharmassist-channel-link" href="https://www.instagram.com/manisharora_health/" target="_blank" rel="noreferrer"><span class="eyebrow">INSTAGRAM · FOUNDER ACCOUNT</span><b>Open Manish Arora ↗</b><span>Founder-led content and communication.</span></a>
-<a class="pharmassist-channel-link" href="https://www.youtube.com/@thepharmassist4367" target="_blank" rel="noreferrer"><span class="eyebrow">YOUTUBE · OFFICIAL CHANNEL</span><b>Visit The Pharmassist on YouTube ↗</b><span>Channel link only; no video is embedded on this page.</span></a>
-</div><p class="pharmassist-note">The imagery shown here is official brand and product photography. The linked profiles take visitors directly to the live brand channels.</p></div>
-<div class="pharmassist-section"><p class="eyebrow">MY CONTRIBUTION</p><h3>I built The Pharmassist brand end to end.</h3><p class="pharmassist-lede">My scope covered the full brand build, from content strategy and visual identity to product direction and the digital experience.</p><div class="pharmassist-framework pharmassist-contribution"><article><b>Brand strategy</b><span>Built the brand position, voice and content strategy around pharmacist-led wellness and founder communication.</span></article><article><b>Visual identity</b><span>Set the brand colors and visual direction, carrying a consistent identity across content and digital touchpoints.</span></article><article><b>Products</b><span>Led product direction and how the wellness portfolio was presented as part of the brand.</span></article><article><b>Content and channels</b><span>Built the content system and social presence to connect education, founder-led storytelling and product discovery.</span></article><article><b>Digital brand experience</b><span>Connected brand communication and product presentation to the direct-to-consumer website.</span></article><article><b>Growth and acquisition</b><span>Built the brand with audience growth and lead generation as part of the business objective.</span></article></div></div>
-<div class="pharmassist-close"><p class="eyebrow">THE TAKEAWAY</p><h3>Content earns attention. Audience growth gives it scale. Lead generation shows how that attention can move toward business impact.</h3><a class="button red" href="https://www.thepharmassist.in/" target="_blank" rel="noreferrer">Visit The Pharmassist ↗</a></div>
-</section>
-<section class="case wrap" id="ksolves"><div class="case-top"><div class="case-art has-image ksolves-art"><img src="https://www.ksolves.com/wp-content/uploads/2026/03/kslogo-ai.webp" alt="Ksolves logo"></div><div class="case-copy"><p class="eyebrow">CASE 02 · B2B LINKEDIN · BRAND REPOSITIONING</p><h2>Ksolves:<br>a content engine<br>for a new era.</h2><p>Helped translate Ksolves’ shift from “Emerging Ahead Always” to “AI First. Always.” into a consistent LinkedIn-first story connecting technology expertise with the people and leadership behind it.</p><div class="meta"><span><b>MY ROLE</b>Strategy, planning, content, publishing</span><span><b>COMPANY</b>Ksolves India Limited</span><span><b>PERIOD</b>Oct 2025–present</span></div><div class="case-links"><a href="https://www.ksolves.com/" target="_blank" rel="noreferrer">Ksolves website ↗</a><a href="https://www.linkedin.com/company/ksolves/posts/?viewAsMember=true" target="_blank" rel="noreferrer">Ksolves LinkedIn posts ↗</a></div></div></div><div class="case-body"><div><h3>The challenge · The work</h3><p>Make the AI-first positioning part of everyday communication, not only a corporate headline. Planned content across technology, case studies, PDF posts, carousels, video, webinars, events and people-led stories.</p><ul><li>Contributed to rebrand discussions, social activation, content direction and visual-direction decisions.</li><li>The design team created the final visual identity system; the broader repositioning was cross-functional.</li><li>Named the Enabling Series, a senior-leadership video property within the broader Enabling communication.</li><li>Developed executive and BFSI thought leadership with four senior leaders.</li></ul></div><div><h3>The impact</h3><p>Page analytics reflect a sustained content and distribution system, not a single viral campaign.</p><div class="outcomes"><div><b>1,505,124</b><span>TOTAL IMPRESSIONS</span></div><div><b>1,121,252</b><span>ORGANIC · 74.5%</span></div><div><b>7,277</b><span>NEW FOLLOWERS</span></div><div><b>17.1%</b><span>ENGAGEMENT RATE</span></div></div><p class="note">Also: 383,872 sponsored impressions · 146,685 page views · 54,176 unique visitors · 13,024 reactions · 319 posts · +87.9% engagement vs competitors. Period: 27 Sep 2025–26 Sep 2026.</p></div></div></section>
-
-<section class="case wrap" id="magni"><div class="case-top"><div class="case-art magni has-image"><img src="assets/magniclipper-product.png" alt="MagniClipper nail clipper showing its magnifying lens and swivel head"></div><div class="case-copy"><p class="eyebrow">CASE 03 · CANADIAN PRODUCT LAUNCH · SAPSOL × CGX MEDICAL</p><h2>Build interest<br>before launch day.</h2><p>Supported pre-launch positioning and crowdfunding preparation for a consumer product with a swivel head, magnifying lens, wide grip and titanium body.</p><div class="meta"><span><b>MY ROLE</b>Website, campaign pages, Meta campaigns</span><span><b>COMPANY</b>Sapsol Technologies</span><span><b>PERIOD</b>Sep 2024–Mar 2025</span></div><div class="company-marks" aria-label="Sapsol Technologies and CGX Medical logos"><a href="https://www.sapsol.com/" target="_blank" rel="noreferrer"><img src="https://sapsol.com/wp-content/uploads/2021/11/Sapsol-Logo-Icon.png" alt="Sapsol Technologies logo"></a><a href="https://www.cgxmedical.com/" target="_blank" rel="noreferrer"><img src="https://www.cgxmedical.com/wp-content/uploads/2021/10/CGX-Website-Logo-V1.0_1_360x1.png" alt="CGX Medical logo"></a></div><div class="case-links"><a href="https://www.sapsol.com/" target="_blank" rel="noreferrer">Sapsol website ↗</a><a href="https://www.linkedin.com/company/sapsol-technologies-inc-/home/" target="_blank" rel="noreferrer">Sapsol on LinkedIn ↗</a><a href="https://www.cgxmedical.com/" target="_blank" rel="noreferrer">CGX Medical ↗</a><a href="https://www.backerkit.com/projects/introducing-magniclipper-precision-redefined" target="_blank" rel="noreferrer">MagniClipper campaign record ↗</a></div></div></div><div class="case-body"><div><h3>The work</h3><ul><li>Helped redesign the product website and developed the Indiegogo campaign page.</li><li>Developed a Kickstarter page; that campaign did not go live.</li><li>Supported product positioning and pre-launch digital strategy.</li><li>Ran Meta campaigns to the website sign-up funnel.</li></ul></div><div><h3>The impact</h3><div class="outcomes"><div><b>2,000+</b><span>PRE-LAUNCH WEBSITE SIGN-UPS</span></div></div><p>People expressing purchase interest before the crowdfunding launch.</p><p class="note">This figure is pre-launch website leads/sign-ups, not crowdfunding backers.</p></div></div></section>
-<section class="case wrap" id="knauf"><div class="case-top"><div class="case-art knauf has-image"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/KNAUF_Logo_2024.svg" alt="Knauf logo"></div><div class="case-copy"><p class="eyebrow">CASE 04 · INDIA · AUDIENCE-LED CONTENT · BUFFALO SOLDIERS</p><h2>Knauf India:<br>content strategy,<br>campaigns and social.</h2><p>As part of Buffalo Soldiers Digital’s account team, I contributed to Knauf India’s content strategy and social media execution, including paid campaign support and product storytelling for Thundersteel.</p><div class="meta"><span><b>MY ROLE</b>Content strategy, paid campaigns, Thundersteel, social media</span><span><b>COMPANY</b>Buffalo Soldiers Digital</span><span><b>PERIOD</b>Jul–Oct 2025</span></div><div class="case-links"><a href="https://knauf.com/en-IN" target="_blank" rel="noreferrer">Knauf India website ↗</a><a href="https://www.linkedin.com/company/knauf-india/home/" target="_blank" rel="noreferrer">Knauf India on LinkedIn ↗</a><a href="https://www.instagram.com/knauf_india/" target="_blank" rel="noreferrer">Knauf India on Instagram ↗</a></div></div></div><div class="case-body"><div><h3>Content strategy & execution</h3><p>Working with the wider account team, I helped shape audience-led product communication and supported the everyday work needed to publish it consistently.</p><ul><li>Contributed to content strategy, audience planning and bilingual Hindi and English story concepts.</li><li>Worked on Thundersteel product storytelling and related social content.</li><li>Supported paid social campaigns in coordination with the wider account team.</li><li>Handled day-to-day social media tasks, including content calendars, creative coordination, publishing and performance reporting.</li></ul></div><div><p class="note">Collaborative account work: my contributions sat within Buffalo Soldiers Digital’s wider strategy, creative and campaign team.</p></div></div></section>
-<section class="case wrap" id="guruji"><div class="case-top"><div class="case-art guruji has-image"><img src="assets/guruji-instagram.png" alt="Guruji Astro profile with its brand logo"></div><div class="case-copy"><p class="eyebrow">CASE 05 · VIDEO · YOUTUBE · TEAM LEADERSHIP</p><h2>Guruji Astro:<br>growing a channel<br>with purpose.</h2><p>Led a five-person team and combined steady video production with audience-focused social content strategy.</p><div class="meta"><span><b>MY ROLE</b>Social Media Manager</span><span><b>COMPANY</b>Guruji Astro</span><span><b>PERIOD</b>Jul 2022–Feb 2023</span></div><div class="case-links"><a href="https://www.linkedin.com/company/guruji-astro/home/" target="_blank" rel="noreferrer">Guruji Astro on LinkedIn ↗</a><a href="https://www.youtube.com/@GurujiAstro" target="_blank" rel="noreferrer">Guruji Astro on YouTube ↗</a><a href="https://www.instagram.com/gurujiastroapp/" target="_blank" rel="noreferrer">Guruji Astro on Instagram ↗</a><a href="https://guruji.app.link/6ApX4JRzhtb" target="_blank" rel="noreferrer">Guruji app ↗</a></div></div></div><div class="project-gallery guruji-gallery" aria-label="Guruji Astro social profiles and video examples"><figure><img src="assets/guruji-instagram.png" alt="Guruji Astro Instagram profile"><figcaption>Instagram profile</figcaption></figure><figure><img src="assets/guruji-linkedin.png" alt="Guruji Astro LinkedIn page"><figcaption>LinkedIn page</figcaption></figure><figure><img src="assets/guruji-youtube-banner.png" alt="Guruji Astro YouTube channel banner"><figcaption>YouTube channel</figcaption></figure><figure><img src="assets/guruji-video-thumbnail.png" alt="Guruji Astro video thumbnail"><figcaption>Audience-led video</figcaption></figure></div><div class="case-body"><div><h3>The work</h3><ul><li>Led five executives across content planning, social execution and quality control.</li><li>Managed strategy and audience-aligned content calendars.</li><li>Produced and edited 20+ video assets per month.</li><li>Executed email marketing and monitored performance.</li></ul></div><div><h3>The impact</h3><div class="outcomes"><div><b>500 → 2,000</b><span>YOUTUBE SUBSCRIBERS · 300% GROWTH</span></div><div><b>20+</b><span>VIDEO ASSETS PER MONTH</span></div></div></div></div></section>
-<section class="wrap resume" id="resume"><div class="resume-top"><div><p class="eyebrow">RÉSUMÉ · STRATEGY · CAMPAIGNS · CONTENT</p><h2>Sanat Singh</h2><p><b>SOCIAL MEDIA SPECIALIST | STRATEGY, CAMPAIGNS &amp; CONTENT</b><br><a href="tel:+918559823300">+91 8559823300</a> · <a href="mailto:sanattsingh009@gmail.com">sanattsingh009@gmail.com</a> · <a href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn ↗</a></p></div><button class="button red" onclick="window.print()">Print / Save résumé as PDF</button></div>
-<p style="font-size:11px;color:#bbb">Social Media Specialist with <b>5+ years of experience across Canada and India</b>, including Canadian campaign and content work for Sapsol Technologies, CGX Medical, MLC College and STEM Montessori Academy of Canada. Specializes in social strategy, integrated campaigns and performance reporting for Canadian, North American and global audiences.</p>
-<div class="resume-grid"><div><h3>Professional experience</h3>
-<article class="job"><h4>Ksolves India Limited</h4><div class="jobline"><b>Senior Social Media Specialist</b><span>October 2025–Present</span></div><ul><li>Manage 9+ LinkedIn pages alongside Meta, X and online forums.</li><li>Lead social strategy, content planning, calendars, campaign ideation, research and platform-specific content.</li><li>Execute 2 end-to-end LinkedIn webinars per week, from planning and promotion to delivery and follow-up content.</li><li>Support banking and fintech client onboarding and brand/digital communication.</li><li>Execute Meta and LinkedIn campaigns for awareness, audience growth and B2B lead generation.</li><li>Use research, social listening and performance insights to guide content.</li></ul></article>
-<article class="job"><h4>Buffalo Soldiers Digital</h4><div class="jobline"><b>Social Media Specialist</b><span>July–October 2025</span></div><ul><li>Managed accounts for Kohinoor Indian Rum, Senior Shield, Serene Communities and Knauf India.</li><li>Developed calendars, campaign plans and platform-specific content with copy and creative teams.</li><li>Coordinated publishing, scheduling and reporting across accounts.</li><li>Led HCLTech ORM, monitoring conversations and sentiment and supporting timely responses.</li></ul></article>
-<article class="job"><h4>Sapsol Technologies</h4><div class="jobline"><b>Brand &amp; Social Media Marketing Strategist</b><span>September 2024–March 2025 · Mississauga, Canada</span></div><ul><li>Increased engagement by 35% across Sapsol Technologies, MLC College and CGX Medical.</li><li>Supported MagniClipper crowdfunding preparation, generating 2,000+ pre-launch website sign-ups through Meta campaigns.</li><li>Résumé-reported: 40% increase in brand awareness through Meta advertising and email marketing.</li><li>Redesigned the Sapsol website, contributing to a résumé-reported 50% increase in website traffic.</li></ul></article>
-<article class="job"><h4>STEM Montessori Academy of Canada</h4><div class="jobline"><b>Volunteer, Brand Engagement Consultant</b><span>July 2023–September 2024 · Remote, Canada</span></div><ul><li>Supported brand and content strategy, multimedia content, email marketing and competitor research.</li><li>Collaborated with internal teams and interns to maintain content quality and timely delivery.</li></ul></article>
-<article class="job"><h4>Guruji Astro</h4><div class="jobline"><b>Social Media Manager</b><span>July 2022–February 2023 · Jaipur, India</span></div><ul><li>Led five executives across content planning, social execution, brand communication and quality control.</li><li>Grew YouTube from 500 to 2,000 subscribers and produced 20+ video assets monthly.</li><li>Executed email marketing and monitored content performance.</li></ul></article>
-</div><aside class="side"><h3>Skills &amp; details</h3><h4>Social media &amp; content</h4><p>Strategy · Organic and paid social · Content development · Editorial calendars · Copywriting · Community management · Social listening</p><h4>Campaigns &amp; stakeholders</h4><p>Integrated campaigns · Campaign planning · Brand consistency · Creative briefing · Stakeholder coordination · Project management</p><h4>Analytics &amp; optimization</h4><p>Social analytics · KPI reporting · Performance analysis · Audience insights · Competitive benchmarking · Trend analysis</p><h4>Platforms &amp; tools</h4><p>LinkedIn · Meta · YouTube · X · Sprinklr · Meltwater · Canva · Figma · Premiere Pro · Photoshop · After Effects</p><h4>Award</h4><p><b>Rising Star Award</b><br>Q1 2026–27 · Ksolves India Limited</p><h4>Certifications</h4><ul><li>HubSpot: Content Marketing; Social Media Marketing I &amp; II</li><li>LinkedIn: Social Media Marketing Strategy; Digital Marketing Foundations</li><li>Anthropic: AI Fluency; Claude 101</li><li>LinkedIn &amp; PMI: Generative AI for Digital Marketers</li></ul><h4>Education</h4><ul><li>PG Certificate, Project Management · Georgian College · Aug 2024</li><li>PG Certificate, Marketing Management · Georgian College · Dec 2023</li><li>Advanced Certification, Audio &amp; Video Editing · TGC Animation · Jun 2021</li><li>BA, Journalism &amp; Mass Communication · Manipal University · Aug 2020</li></ul></aside></div></section>
-<section class="wrap about" id="about"><div class="portrait"><img src="assets/sanat-headshot.png" alt="Sanat Singh, social media specialist"></div><div><p class="eyebrow">ABOUT SANAT</p><h2>Clear thinking.<br><em>Human stories.</em></h2><p>Hi, I’m Sanat Singh, a social media specialist with 5+ years of experience across Canada and India. I bring a North American market perspective to brand strategy, content and campaigns, helping teams connect business goals with the audiences they serve across North America.</p><p>My experience spans B2B technology, banking and fintech initiatives, consumer health, education, lifestyle and reputation management. I enjoy making complex topics more approachable, building a dependable publishing rhythm and learning from audience response.</p><p><a class="button" href="#resume">Read résumé ↓</a> &nbsp; <a class="button" href="#work">Explore work ↑</a></p></div></section>
-<section class="contact" id="contact"><div class="wrap contact-inner"><div><p class="eyebrow">CONTACT</p><h2>Let’s make the<br>next story count.</h2><p>For roles, collaborations or a conversation about social strategy.</p></div><div class="contact-links"><a class="button red" href="mailto:sanattsingh009@gmail.com">Email Sanat ↗</a><a class="button" href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button" href="tel:+918559823300">Call ↗</a></div></div></section>
-</main>
-<footer class="wrap"><a class="brand" href="#home"><span class="brand-mark"></span>SANAT SINGH</a><span>Brand · Content · Social</span><span><a href="mailto:sanattsingh009@gmail.com">Email</a> <a href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noreferrer">LinkedIn</a></span><small>© 2026 Sanat Singh</small></footer>
-<script>
-const menu=document.querySelector("#menu"),nav=document.querySelector("#nav");
-menu.addEventListener("click",()=>{let open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",open)});
-nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#09090A">
+    <title>Sanat Singh — Social Media, Brand &amp; Content Strategist</title>
+    <meta name="description" content="Social media, brand and content strategy by Sanat Singh. Explore real campaigns, creative work and performance evidence across India, Canada and North American markets.">
+    <meta property="og:title" content="Sanat Singh — Social Media, Brand &amp; Content Strategist">
+    <meta property="og:description" content="Beyond the scroll. Into the story. Selected brand stories, campaigns and social media work across India and Canada.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sanattsingh.github.io/sanat.singh/">
+    <meta property="og:image" content="https://sanattsingh.github.io/sanat.singh/assets/sanat-headshot.png">
+    <link rel="canonical" href="https://sanattsingh.github.io/sanat.singh/">
+    <link rel="preload" href="assets/fonts/playfair-display-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home" aria-label="Sanat Singh, home">
+          <span class="brand-initials">SS<span>.</span>
+          </span>
+          <span class="brand-name">Sanat Singh</span>
+        </a>
+        <button class="menu-toggle" id="menu" type="button" aria-expanded="false" aria-controls="nav">
+          <span class="menu-label">Menu</span>
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav id="nav" aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#resume">Experience</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="mailto:sanattsingh009@gmail.com">Let’s talk <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <p class="eyebrow">SANAT SINGH / SELECTED PORTFOLIO</p>
+            <h1 id="hero-title">
+              <span>Beyond the</span>
+              <span>scroll.</span>
+              <em>Into the<br> story.</em>
+            </h1>
+            <p class="hero-role">Social Media, Brand &amp; Content Strategist</p>
+          </div>
+          <!-- Decorative platform marks: a social composition, not outbound links. -->
+          <div class="hero-social" aria-hidden="true">
+            <div class="social-orbit"></div>
+            <div class="social-mark mark-linkedin"><div class="mark-face"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="11" cy="11" r="4"/><path d="M7 19h8v23H7zM21 19h8v3c2-3 5-4 8-4 7 0 8 5 8 11v13h-8V30c0-4-1-6-4-6s-4 2-4 6v12h-8z"/></svg></div></div>
+            <div class="social-mark mark-x"><div class="mark-face"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-7.4L5.6 22H2.5l8.2-9.4L.8 2h6.4l4.4 6.8L18.9 2ZM17.8 20h1.7L6.2 3.9H4.4L17.8 20Z"/></svg></div></div>
+            <div class="social-mark mark-instagram"><div class="mark-face"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><rect x="6" y="6" width="36" height="36" rx="11"/><circle cx="24" cy="24" r="9"/><circle cx="35" cy="13" r="2" fill="currentColor" stroke="none"/></svg></div></div>
+            <div class="social-mark mark-youtube"><div class="mark-face"><svg viewBox="0 0 48 48"><path fill="currentColor" d="M44 15c-.5-3-2-5-5-5-10-1-20-1-30 0-3 0-4.5 2-5 5-1 6-1 12 0 18 .5 3 2 5 5 5 10 1 20 1 30 0 3 0 4.5-2 5-5 1-6 1-12 0-18Z"/><path fill="#18181a" d="m20 16 13 8-13 8Z"/></svg></div></div>
+            <div class="social-mark mark-facebook"><div class="mark-face"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 24V13h3.7l.6-4.3h-4.3V6c0-1.3.4-2.1 2.2-2.1H20V.2C19.4.1 18.2 0 16.7 0c-3.4 0-5.7 2.1-5.7 5.8v2.9H7.2V13H11v11Z"/></svg></div></div>
+          </div>
+          <div class="hero-side">
+            <p class="hero-statement">A clear point of view.<br>A story people <em>feel.</em>
+            </p>
+            <p class="hero-support">With experience across Canada and India, I build audience-first social stories for Canadian and North American brands, from B2B technology and financial services to product launches and campaigns.</p>
+            <div class="hero-actions">
+              <a class="text-link" href="#work">Explore my work <span class="circle-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="quiet-link" href="#contact">Start a conversation ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <span>Strategy, storytelling &amp; creative execution</span>
+          <a href="#about">India · Canada · North American markets <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+      <section class="brand-showcase" aria-label="Selected brand experience">
+        <div class="wrap strip-heading">
+          <p class="eyebrow">ACROSS BRANDS. ACROSS CONTEXTS.</p>
+          <button class="marquee-toggle" type="button" aria-pressed="false" aria-label="Pause brand motion"><span aria-hidden="true">Ⅱ</span>
+          </button>
+        </div>
+        <div class="marquee">
+          <div class="marquee-track">
+            <div class="brand-group">
+              <a href="#pharmassist" aria-label="The Pharmassist">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/the-pharmassist.svg" width="201" height="44" alt="The Pharmassist logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#ksolves" aria-label="Ksolves">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/ksolves.webp" width="2560" height="695" alt="Ksolves logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#magni" aria-label="MagniClipper">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/magniclipper.webp" width="800" height="561" alt="MagniClipper logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#knauf" aria-label="Knauf India">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/knauf-india.svg" width="283" height="143" alt="Knauf India logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#guruji" aria-label="Guruji Astro">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/guruji-astro.png" width="459" height="510" alt="Guruji Astro logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#hcltech" aria-label="HCLTech">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/hcltech.png" width="767" height="142" alt="HCLTech logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#kohinoor" aria-label="Kohinoor Dark Rum">
+                <span class="wordmark">Kohinoor Dark Rum</span>
+              </a>
+              <a href="#serene" aria-label="Serene Communities">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/serene-communities.webp" width="300" height="55" alt="Serene Communities logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#sapsol" aria-label="SAPSOL Technologies">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/sapsol.webp" width="2219" height="2219" alt="SAPSOL Technologies logo" loading="lazy" decoding="async">
+                </span>
+                <span class="logo-caption">SAPSOL Technologies</span>
+              </a>
+              <a href="#mlc" aria-label="MLC College">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/mlc-college.png" width="281" height="72" alt="MLC College logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#cgx" aria-label="CGX Medical">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/cgx-medical.png" width="260" height="84" alt="CGX Medical logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#surgery" aria-label="Surgery Tours India">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/surgery-tours-india.webp" width="350" height="154" alt="Surgery Tours India logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#shubham" aria-label="Shubham Graphics, Jaipur">
+                <span class="wordmark">Shubham Graphics, Jaipur</span>
+              </a>
+              <a href="#senior" aria-label="Senior Shield">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/senior-shield.webp" width="298" height="89" alt="Senior Shield logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+            </div>
+            <div class="brand-group" aria-hidden="true" inert>
+              <a href="#pharmassist" aria-label="The Pharmassist" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/the-pharmassist.svg" width="201" height="44" alt="The Pharmassist logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#ksolves" aria-label="Ksolves" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/ksolves.webp" width="2560" height="695" alt="Ksolves logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#magni" aria-label="MagniClipper" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/magniclipper.webp" width="800" height="561" alt="MagniClipper logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#knauf" aria-label="Knauf India" tabindex="-1">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/knauf-india.svg" width="283" height="143" alt="Knauf India logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#guruji" aria-label="Guruji Astro" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/guruji-astro.png" width="459" height="510" alt="Guruji Astro logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#hcltech" aria-label="HCLTech" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/hcltech.png" width="767" height="142" alt="HCLTech logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#kohinoor" aria-label="Kohinoor Dark Rum" tabindex="-1">
+                <span class="wordmark">Kohinoor Dark Rum</span>
+              </a>
+              <a href="#serene" aria-label="Serene Communities" tabindex="-1">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/serene-communities.webp" width="300" height="55" alt="Serene Communities logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#sapsol" aria-label="SAPSOL Technologies" tabindex="-1">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/sapsol.webp" width="2219" height="2219" alt="SAPSOL Technologies logo" loading="lazy" decoding="async">
+                </span>
+                <span class="logo-caption">SAPSOL Technologies</span>
+              </a>
+              <a href="#mlc" aria-label="MLC College" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/mlc-college.png" width="281" height="72" alt="MLC College logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#cgx" aria-label="CGX Medical" tabindex="-1">
+                <span class="logo-frame ">
+                  <img class="" src="assets/brands/cgx-medical.png" width="260" height="84" alt="CGX Medical logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#surgery" aria-label="Surgery Tours India" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/surgery-tours-india.webp" width="350" height="154" alt="Surgery Tours India logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+              <a href="#shubham" aria-label="Shubham Graphics, Jaipur" tabindex="-1">
+                <span class="wordmark">Shubham Graphics, Jaipur</span>
+              </a>
+              <a href="#senior" aria-label="Senior Shield" tabindex="-1">
+                <span class="logo-frame light">
+                  <img class="" src="assets/brands/senior-shield.webp" width="298" height="89" alt="Senior Shield logo" loading="lazy" decoding="async">
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="intro wrap section" id="about">
+        <div class="intro-grid">
+          <div>
+            <p class="eyebrow">01 / THE PERSON BEHIND THE WORK</p>
+            <h2>Clear thinking.<br>
+              <em>Human stories.</em>
+            </h2>
+            <div class="portrait-line">
+              <img src="assets/sanat-headshot.webp" width="880" height="1100" alt="Sanat Singh" loading="lazy" decoding="async">
+              <span>Sanat Singh<br>
+                <small>Strategy · Content · Social</small>
+              </span>
+            </div>
+          </div>
+          <div class="intro-copy">
+            <p class="intro-lede">I connect what a brand wants to say with what its audience needs to hear.</p>
+            <p>Hi, I’m Sanat Singh, a social media specialist with 5+ years of experience across Canada and India. My work brings together brand storytelling, content planning and campaign execution with competitive intelligence, KPI reporting and online reputation management.</p>
+            <p>From B2B technology and consumer health to education, senior living and lifestyle, I make complex topics approachable, build a dependable publishing rhythm and learn from audience response. That work includes Canadian and North American-facing brands.</p>
+          </div>
+        </div>
+        <div class="capabilities">
+          <div>
+            <span class="cap-number">01</span>
+            <h3>Strategy</h3>
+            <p>Social &amp; content strategy, audience growth, brand storytelling, competitor analysis and competitive benchmarking.</p>
+          </div>
+          <div>
+            <span class="cap-number">02</span>
+            <h3>Execution</h3>
+            <p>Content calendars, campaign ideation, product marketing, brand communications, webinar and lead-generation support.</p>
+          </div>
+          <div>
+            <span class="cap-number">03</span>
+            <h3>Intelligence</h3>
+            <p>KPI tracking, social analytics, performance reporting, ORM and sentiment monitoring.</p>
+          </div>
+          <div>
+            <span class="cap-number">04</span>
+            <h3>Creative judgment</h3>
+            <p>Creative direction, visual storytelling and AI-assisted creative workflows, in collaboration with design teams.</p>
+          </div>
+        </div>
+      </section>
+      <section class="selected-work section" id="work">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / SELECTED WORK</p>
+              <h2>Real brands.<br>
+                <em>Considered impact.</em>
+              </h2>
+            </div>
+            <p>Brand building, B2B content, product launches and campaign stories. The strategy behind the work, with the actual work alongside it.</p>
+          </div>
+          <div class="work-index">
+            <a href="#pharmassist">01 The Pharmassist</a>
+            <a href="#ksolves">02 Ksolves</a>
+            <a href="#magni">03 MagniClipper</a>
+            <a href="#knauf">04 Knauf India</a>
+            <a href="#guruji">05 Guruji Astro</a>
+          </div>
+          <!-- CASE 01: update text and metrics directly here. Artwork source map: ASSET-MAP.md -->
+          <article class="case flagship" id="pharmassist" aria-labelledby="pharmassist-title">
+            <div class="case-topline">
+              <span class="eyebrow">01 / HEALTH &amp; WELLNESS</span>
+              <span class="logo-frame light">
+                <img class="" src="assets/brands/the-pharmassist.svg" width="201" height="44" alt="The Pharmassist logo" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div class="flagship-lead">
+              <div class="case-copy">
+                <p class="project-category">BRAND BUILDING · CONTENT · ACQUISITION</p>
+                <h3 id="pharmassist-title">The Pharmassist</h3>
+                <p class="project-deck">Build trust.<br>
+                  <em>Make the brand tangible.</em>
+                </p>
+                <p>A pharmacist-led brand connecting educational content, founder-led communication and a consumer wellness portfolio.</p>
+                <p>My scope covered the brand build: positioning, visual identity, product direction, content strategy and the digital experience.</p>
+                <div class="contribution-line">Brand strategy / Visual direction / Content &amp; channels</div>
+                <div class="case-links">
+                  <a href="https://www.thepharmassist.in/" target="_blank" rel="noopener noreferrer">Website ↗</a>
+                  <a href="https://www.instagram.com/thepharmassistindia/" target="_blank" rel="noopener noreferrer">Brand Instagram ↗</a>
+                  <a href="https://www.instagram.com/manisharora_health/" target="_blank" rel="noopener noreferrer">Founder Instagram ↗</a>
+                  <a href="https://www.youtube.com/@thepharmassist4367" target="_blank" rel="noopener noreferrer">YouTube channel ↗</a>
+                </div>
+              </div>
+              <figure class="creative anchor-creative">
+                <a class="art-link" href="assets/projects/the-pharmassist/product-range.webp" target="_blank" rel="noopener" aria-label="View full-size: The Pharmassist range of wellness products on colored display plinths">
+                  <img class="" src="assets/projects/the-pharmassist/product-range.webp" width="1254" height="1254" alt="The Pharmassist range of wellness products on colored display plinths" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>The product portfolio · Brand and product storytelling</figcaption>
+              </figure>
+            </div>
+            <div class="chapter-narrative">
+              <p class="eyebrow">ONE CONNECTED BRAND</p>
+              <p>Pharmacist-led education creates a natural bridge from learning and trust to product discovery. The work connected what the brand says, how it looks and how people experience it online.</p>
+            </div>
+            <div class="creative-grid products">
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/the-pharmassist/burn.webp" target="_blank" rel="noopener" aria-label="View full-size: The Pharmassist Burn bottle held against a red background">
+                  <img class="" src="assets/projects/the-pharmassist/burn.webp" width="1200" height="960" alt="The Pharmassist Burn bottle held against a red background" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Burn · Product communication</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/the-pharmassist/hair.webp" target="_blank" rel="noopener" aria-label="View full-size: The Pharmassist Hair bottle in a blue product creative">
+                  <img class="" src="assets/projects/the-pharmassist/hair.webp" width="1200" height="960" alt="The Pharmassist Hair bottle in a blue product creative" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Hair · Product communication</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/the-pharmassist/multi.webp" target="_blank" rel="noopener" aria-label="View full-size: The Pharmassist Multi bottle in an orange product creative">
+                  <img class="" src="assets/projects/the-pharmassist/multi.webp" width="1200" height="960" alt="The Pharmassist Multi bottle in an orange product creative" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Multi · Product communication</figcaption>
+              </figure>
+            </div>
+            <div class="metric-header">
+              <p class="eyebrow">BRAND &amp; FOUNDER CHANNEL SNAPSHOT</p>
+              <p>Existing portfolio figures; channel totals reflect the brand’s wider work and are not solely attributable to me.</p>
+            </div>
+            <div class="pharmassist-stats" aria-label="The Pharmassist audience figures">
+              <div class="pharmassist-stat">
+                <b>427K</b>
+                <span>Instagram followers<br>Brand account</span>
+              </div>
+              <div class="pharmassist-stat">
+                <b>398K</b>
+                <span>Instagram followers<br>Founder account</span>
+              </div>
+              <div class="pharmassist-stat">
+                <b>478K</b>
+                <span>YouTube subscribers</span>
+              </div>
+              <div class="pharmassist-stat">
+                <b>14.69M</b>
+                <span>YouTube lifetime views</span>
+              </div>
+              <div class="pharmassist-stat">
+                <b>224</b>
+                <span>YouTube videos</span>
+              </div>
+            </div>
+            <details class="case-details">
+              <summary>
+                <span class="detail-label">Strategy &amp; contribution</span>
+                <span class="circle-arrow" aria-hidden="true">→</span>
+                <span class="sr-only">: The Pharmassist</span>
+              </summary>
+              <div class="case-details-content">
+                <div class="pharmassist-section">
+                  <p class="eyebrow">THE BRAND</p>
+                  <h4>Pharmacist-led communication, a founder people recognize, and a direct-to-consumer product range.</h4>
+                  <p class="pharmassist-lede">The Pharmassist presents itself as a pharmacist-led wellness brand. Its website pairs founder-led communication with educational content and a direct-to-consumer store spanning hair, weight management, wellness, energy and vitality products. That gives the brand a natural bridge from learning and trust to product discovery and purchase.</p>
+                  <p class="pharmassist-note">Product categories and founder details are drawn from the brand website. Brand statements about product benefits remain brand claims; this case study does not add medical efficacy or regulatory claims.</p>
+                </div>
+                <div class="pharmassist-section">
+                  <p class="eyebrow">THE STRATEGY</p>
+                  <h4>Build one connected brand, from pharmacist-led education to product discovery.</h4>
+                  <p class="pharmassist-lede">The brand brings pharmacist expertise, founder-led communication and a consumer wellness portfolio together under a recognizable identity. The work connects what the brand says, how it looks, what it offers and how people discover it online.</p>
+                  <div class="pharmassist-framework">
+                    <article>
+                      <b>Brand platform</b>
+                      <span>Built the pharmacist-led positioning and approachable wellness voice that anchor the brand.</span>
+                    </article>
+                    <article>
+                      <b>Visual identity</b>
+                      <span>Defined the color direction and visual language, then carried that identity across brand touchpoints.</span>
+                    </article>
+                    <article>
+                      <b>Product direction</b>
+                      <span>Shaped the product portfolio and how the offers fit within the wider wellness brand.</span>
+                    </article>
+                    <article>
+                      <b>Content strategy</b>
+                      <span>Connected useful education, founder communication and product storytelling in a coherent content system.</span>
+                    </article>
+                    <article>
+                      <b>Channel strategy</b>
+                      <span>Built the brand presence across Instagram, YouTube and the direct-to-consumer website.</span>
+                    </article>
+                    <article>
+                      <b>Audience to acquisition</b>
+                      <span>Designed the brand experience to move from discovery and interest toward product exploration and lead generation.</span>
+                    </article>
+                  </div>
+                </div>
+                <div class="pharmassist-section">
+                  <p class="eyebrow">CONTENT &amp; EXECUTION</p>
+                  <h4>Real brand and product visuals, with channel examples linked to their source.</h4>
+                  <div class="pharmassist-channel-grid">
+                    <a class="pharmassist-channel-link" href="https://www.instagram.com/thepharmassistindia/" target="_blank" rel="noopener noreferrer">
+                      <span class="eyebrow">INSTAGRAM · BRAND ACCOUNT</span>
+                      <b>Open The Pharmassist ↗</b>
+                      <span>Official brand profile and content source.</span>
+                    </a>
+                    <a class="pharmassist-channel-link" href="https://www.instagram.com/manisharora_health/" target="_blank" rel="noopener noreferrer">
+                      <span class="eyebrow">INSTAGRAM · FOUNDER ACCOUNT</span>
+                      <b>Open Manish Arora ↗</b>
+                      <span>Founder-led content and communication.</span>
+                    </a>
+                    <a class="pharmassist-channel-link" href="https://www.youtube.com/@thepharmassist4367" target="_blank" rel="noopener noreferrer">
+                      <span class="eyebrow">YOUTUBE · OFFICIAL CHANNEL</span>
+                      <b>Visit The Pharmassist on YouTube ↗</b>
+                      <span>Channel link only; no video is embedded on this page.</span>
+                    </a>
+                  </div>
+                  <p class="pharmassist-note">The selected product creatives retain their original brand colors and packaging. The linked profiles open the live brand channels.</p>
+                </div>
+                <div class="pharmassist-section">
+                  <p class="eyebrow">MY CONTRIBUTION</p>
+                  <h4>I built The Pharmassist brand end to end.</h4>
+                  <p class="pharmassist-lede">My scope covered the full brand build, from content strategy and visual identity to product direction and the digital experience.</p>
+                  <div class="pharmassist-framework pharmassist-contribution">
+                    <article>
+                      <b>Brand strategy</b>
+                      <span>Built the brand position, voice and content strategy around pharmacist-led wellness and founder communication.</span>
+                    </article>
+                    <article>
+                      <b>Visual identity</b>
+                      <span>Set the brand colors and visual direction, carrying a consistent identity across content and digital touchpoints.</span>
+                    </article>
+                    <article>
+                      <b>Products</b>
+                      <span>Led product direction and how the wellness portfolio was presented as part of the brand.</span>
+                    </article>
+                    <article>
+                      <b>Content and channels</b>
+                      <span>Built the content system and social presence to connect education, founder-led storytelling and product discovery.</span>
+                    </article>
+                    <article>
+                      <b>Digital brand experience</b>
+                      <span>Connected brand communication and product presentation to the direct-to-consumer website.</span>
+                    </article>
+                    <article>
+                      <b>Growth and acquisition</b>
+                      <span>Built the brand with audience growth and lead generation as part of the business objective.</span>
+                    </article>
+                  </div>
+                </div>
+                <div class="pharmassist-close">
+                  <p class="eyebrow">THE TAKEAWAY</p>
+                  <h4>Content earns attention. Audience growth gives it scale. Lead generation shows how that attention can move toward business impact.</h4>
+                  <a class="button red" href="https://www.thepharmassist.in/" target="_blank" rel="noopener noreferrer">Visit The Pharmassist ↗</a>
+                </div>
+              </div>
+            </details>
+          </article>
+          <!-- CASE 02 -->
+          <article class="case b2b" id="ksolves" aria-labelledby="ksolves-title">
+            <div class="case-topline">
+              <span class="eyebrow">02 / B2B TECHNOLOGY</span>
+              <span class="logo-frame light">
+                <img class="" src="assets/brands/ksolves.webp" width="2560" height="695" alt="Ksolves logo" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div class="project-intro">
+              <div>
+                <h3 id="ksolves-title">Ksolves</h3>
+                <p class="project-deck">A content engine<br>
+                  <em>for an AI-first era.</em>
+                </p>
+                <figure class="creative ksolves-intro-visual">
+                  <a class="art-link" href="assets/projects/ksolves/keda-webinar.webp" target="_blank" rel="noopener" aria-label="View full-size: Ksolves KEDA webinar banner about scaling Kubernetes workloads">
+                    <img class="" src="assets/projects/ksolves/keda-webinar.webp" width="1200" height="627" alt="Ksolves KEDA webinar banner about scaling Kubernetes workloads" loading="lazy" decoding="async">
+                    <span class="art-open" aria-hidden="true">↗</span>
+                  </a>
+                  <figcaption>Webinar marketing · KEDA / Kubernetes</figcaption>
+                </figure>
+              </div>
+              <div>
+                <p>Helped translate the shift from “Emerging Ahead Always” to “AI First. Always.” into a consistent LinkedIn-first story, connecting technology expertise with people and leadership.</p>
+                <p>North American-facing B2B content, competitive benchmarking, social performance reporting and campaign planning, coordinated with the wider marketing team.</p>
+                <div class="contribution-line">Strategy / Planning / Content / Publishing</div>
+                <div class="case-links">
+                  <a href="https://www.ksolves.com/" target="_blank" rel="noopener noreferrer">Ksolves website ↗</a>
+                  <a href="https://www.linkedin.com/company/ksolves/posts/?viewAsMember=true" target="_blank" rel="noopener noreferrer">Ksolves LinkedIn posts ↗</a>
+                </div>
+              </div>
+            </div>
+            <div class="metric-header">
+              <p class="eyebrow">LINKEDIN PAGE PERFORMANCE</p>
+              <p>27 Sep 2025–26 Sep 2026 · Page-level analytics.<br>My role began October 2025; this reporting window starts slightly earlier.</p>
+            </div>
+            <div class="outcomes" aria-label="Ksolves results">
+              <div>
+                <b>1,505,124</b>
+                <span>TOTAL IMPRESSIONS</span>
+              </div>
+              <div>
+                <b>1,121,252</b>
+                <span>ORGANIC · 74.5%</span>
+              </div>
+              <div>
+                <b>7,277</b>
+                <span>NEW FOLLOWERS</span>
+              </div>
+              <div>
+                <b>17.1%</b>
+                <span>ENGAGEMENT RATE</span>
+              </div>
+            </div>
+            <p class="note case-result-note">Also: 383,872 sponsored impressions · 146,685 page views · 54,176 unique visitors · 13,024 reactions · 319 posts · +87.9% engagement vs competitors. Period: 27 Sep 2025–26 Sep 2026.</p>
+            <div class="creative-grid social-three">
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/ksolves/dashboard-ninja.jpg" target="_blank" rel="noopener" aria-label="View full-size: Ksolves Dashboard Ninja with AI social creative">
+                  <img class="" src="assets/projects/ksolves/dashboard-ninja.jpg" width="800" height="1000" alt="Ksolves Dashboard Ninja with AI social creative" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Product value · Dashboard Ninja with AI</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/ksolves/frappe-partner.jpg" target="_blank" rel="noopener" aria-label="View full-size: Ksolves official Frappe partner in the USA announcement">
+                  <img class="" src="assets/projects/ksolves/frappe-partner.jpg" width="800" height="1000" alt="Ksolves official Frappe partner in the USA announcement" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Market presence · Frappe partnership</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/projects/ksolves/nifi-mcp.webp" target="_blank" rel="noopener" aria-label="View full-size: Ksolves NiFi and MCP AI strategy social post">
+                  <img class="" src="assets/projects/ksolves/nifi-mcp.webp" width="521" height="647" alt="Ksolves NiFi and MCP AI strategy social post" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Technology storytelling · NiFi + MCP</figcaption>
+              </figure>
+            </div>
+            <div class="webinar-module">
+              <div>
+                <p class="eyebrow">BEYOND THE FEED</p>
+                <h4>Turn expertise into<br>
+                  <em>a conversation.</em>
+                </h4>
+                <p>My current role includes two end-to-end LinkedIn webinars per week: planning, promotion, delivery and follow-up content. Webinar communication supports the wider B2B lead-generation effort.</p>
+                <p class="note">Selected webinar artwork shown; no registration or lead totals are claimed.</p>
+              </div>
+            </div>
+            <details class="case-details">
+              <summary>
+                <span class="detail-label">Strategy &amp; contribution</span>
+                <span class="circle-arrow" aria-hidden="true">→</span>
+                <span class="sr-only">: Ksolves</span>
+              </summary>
+              <div class="case-details-content">
+                <div class="case-body">
+                  <div>
+                    <h4>The challenge · The work</h4>
+                    <p>Make the AI-first positioning part of everyday communication, not only a corporate headline. Planned content across technology, case studies, PDF posts, carousels, video, webinars, events and people-led stories.</p>
+                    <ul>
+                      <li>Contributed to rebrand discussions, social activation, content direction and visual-direction decisions.</li>
+                      <li>The design team created the final visual identity system; the broader repositioning was cross-functional.</li>
+                      <li>Named the Enabling Series, a senior-leadership video property within the broader Enabling communication.</li>
+                      <li>Developed executive and BFSI thought leadership with four senior leaders.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>The impact</h4>
+                    <p>Page analytics reflect a sustained content and distribution system, not a single viral campaign.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+          <!-- CASE 03 -->
+          <article class="case launch" id="magni" aria-labelledby="magni-title">
+            <div class="case-topline">
+              <span class="eyebrow">03 / CONSUMER PRODUCT LAUNCH</span>
+              <span class="logo-frame light">
+                <img class="" src="assets/brands/magniclipper.webp" width="800" height="561" alt="MagniClipper logo" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div class="launch-grid">
+              <div class="case-copy">
+                <h3 id="magni-title">MagniClipper</h3>
+                <p class="project-deck">Build interest.<br>
+                  <em>Before launch day.</em>
+                </p>
+                <p>Supported product positioning and crowdfunding preparation through SAPSOL Technologies and CGX Medical, connecting a practical product story with a pre-launch sign-up funnel.</p>
+                <p>The work spanned the product website, campaign pages, launch communication and Meta campaigns.</p>
+                <div class="launch-metric">
+                  <div class="outcomes" aria-label="MagniClipper results">
+                    <div>
+                      <b>2,000+</b>
+                      <span>PRE-LAUNCH WEBSITE SIGN-UPS</span>
+                    </div>
+                  </div>
+                  <p class="note case-result-note">This figure is pre-launch website leads/sign-ups, not crowdfunding backers.</p>
+                </div>
+                <div class="case-links">
+                  <a href="https://www.sapsol.com/" target="_blank" rel="noopener noreferrer">Sapsol website ↗</a>
+                  <a href="https://www.linkedin.com/company/sapsol-technologies-inc-/home/" target="_blank" rel="noopener noreferrer">Sapsol on LinkedIn ↗</a>
+                  <a href="https://www.cgxmedical.com/" target="_blank" rel="noopener noreferrer">CGX Medical ↗</a>
+                  <a href="https://www.backerkit.com/projects/introducing-magniclipper-precision-redefined" target="_blank" rel="noopener noreferrer">MagniClipper campaign record ↗</a>
+                </div>
+              </div>
+              <div class="launch-art">
+                <figure class="creative ">
+                  <a class="art-link" href="assets/projects/magniclipper/launch-announcement.webp" target="_blank" rel="noopener" aria-label="View full-size: MagniClipper launch creative introducing the nail clipper and magnifying lens">
+                    <img class="" src="assets/projects/magniclipper/launch-announcement.webp" width="1080" height="1350" alt="MagniClipper launch creative introducing the nail clipper and magnifying lens" loading="lazy" decoding="async">
+                    <span class="art-open" aria-hidden="true">↗</span>
+                  </a>
+                  <figcaption>Product positioning · Launch announcement</figcaption>
+                </figure>
+                <figure class="creative ">
+                  <a class="art-link" href="assets/projects/magniclipper/launch-countdown.webp" target="_blank" rel="noopener" aria-label="View full-size: MagniClipper one-day launch countdown creative">
+                    <img class="" src="assets/projects/magniclipper/launch-countdown.webp" width="1080" height="1350" alt="MagniClipper one-day launch countdown creative" loading="lazy" decoding="async">
+                    <span class="art-open" aria-hidden="true">↗</span>
+                  </a>
+                  <figcaption>Launch momentum · Countdown</figcaption>
+                </figure>
+              </div>
+            </div>
+            <details class="case-details">
+              <summary>
+                <span class="detail-label">Strategy &amp; contribution</span>
+                <span class="circle-arrow" aria-hidden="true">→</span>
+                <span class="sr-only">: MagniClipper</span>
+              </summary>
+              <div class="case-details-content">
+                <div class="case-body">
+                  <div>
+                    <h4>The work</h4>
+                    <ul>
+                      <li>Helped redesign the product website and developed the Indiegogo campaign page.</li>
+                      <li>Developed a Kickstarter page; that campaign did not go live.</li>
+                      <li>Supported product positioning and pre-launch digital strategy.</li>
+                      <li>Ran Meta campaigns to the website sign-up funnel.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>The impact</h4>
+                    <p>People expressing purchase interest before the crowdfunding launch.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+          <!-- CASE 04 -->
+          <article class="case building" id="knauf" aria-labelledby="knauf-title">
+            <div class="case-topline">
+              <span class="eyebrow">04 / BUILDING MATERIALS</span>
+              <span class="logo-frame ">
+                <img class="" src="assets/brands/knauf-india.svg" width="283" height="143" alt="Knauf India logo" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div class="knauf-grid">
+              <figure class="creative knauf-anchor">
+                <a class="art-link" href="assets/projects/knauf-india/sheetrock.webp" target="_blank" rel="noopener" aria-label="View full-size: Knauf Sheetrock ceiling creative with the line Even the art stops to admire">
+                  <img class="" src="assets/projects/knauf-india/sheetrock.webp" width="800" height="1000" alt="Knauf Sheetrock ceiling creative with the line Even the art stops to admire" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Product storytelling · Sheetrock</figcaption>
+              </figure>
+              <div class="case-copy">
+                <h3 id="knauf-title">Knauf India</h3>
+                <p class="project-deck">Give product stories<br>
+                  <em>a human setting.</em>
+                </p>
+                <p>As part of Buffalo Soldiers Digital’s account team, I contributed to content strategy and social execution, including paid campaign support and Thundersteel product storytelling.</p>
+                <p>Audience planning, Hindi and English concepts, creative coordination, publishing and reporting sat within the wider agency team’s work.</p>
+                <p class="note">The supplied selection below shows Sheetrock, Aquapanel and seasonal communication; it is not presented as Thundersteel campaign evidence.</p>
+                <div class="case-links">
+                  <a href="https://knauf.com/en-IN" target="_blank" rel="noopener noreferrer">Knauf India website ↗</a>
+                  <a href="https://www.linkedin.com/company/knauf-india/home/" target="_blank" rel="noopener noreferrer">Knauf India on LinkedIn ↗</a>
+                  <a href="https://www.instagram.com/knauf_india/" target="_blank" rel="noopener noreferrer">Knauf India on Instagram ↗</a>
+                </div>
+                <div class="creative-grid knauf-pair">
+                  <figure class="creative ">
+                    <a class="art-link" href="assets/projects/knauf-india/aquapanel.webp" target="_blank" rel="noopener" aria-label="View full-size: Knauf Aquapanel outdoor building product creative">
+                      <img class="" src="assets/projects/knauf-india/aquapanel.webp" width="800" height="1000" alt="Knauf Aquapanel outdoor building product creative" loading="lazy" decoding="async">
+                      <span class="art-open" aria-hidden="true">↗</span>
+                    </a>
+                    <figcaption>Aquapanel · Product communication</figcaption>
+                  </figure>
+                  <figure class="creative ">
+                    <a class="art-link" href="assets/projects/knauf-india/christmas.webp" target="_blank" rel="noopener" aria-label="View full-size: Knauf Christmas living-room creative">
+                      <img class="" src="assets/projects/knauf-india/christmas.webp" width="720" height="900" alt="Knauf Christmas living-room creative" loading="lazy" decoding="async">
+                      <span class="art-open" aria-hidden="true">↗</span>
+                    </a>
+                    <figcaption>Seasonal · Brand communication</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <details class="case-details">
+              <summary>
+                <span class="detail-label">Strategy &amp; contribution</span>
+                <span class="circle-arrow" aria-hidden="true">→</span>
+                <span class="sr-only">: Knauf India</span>
+              </summary>
+              <div class="case-details-content">
+                <div class="case-body">
+                  <div>
+                    <h4>Content strategy &amp; execution</h4>
+                    <p>Working with the wider account team, I helped shape audience-led product communication and supported the everyday work needed to publish it consistently.</p>
+                    <ul>
+                      <li>Contributed to content strategy, audience planning and bilingual Hindi and English story concepts.</li>
+                      <li>Worked on Thundersteel product storytelling and related social content.</li>
+                      <li>Supported paid social campaigns in coordination with the wider account team.</li>
+                      <li>Handled day-to-day social media tasks, including content calendars, creative coordination, publishing and performance reporting.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="note">Collaborative account work: my contributions sat within Buffalo Soldiers Digital’s wider strategy, creative and campaign team.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+          <!-- CASE 05 -->
+          <article class="case acquisition" id="guruji" aria-labelledby="guruji-title">
+            <div class="case-topline">
+              <span class="eyebrow">05 / OFFER-LED ACQUISITION</span>
+              <span class="logo-frame light">
+                <img class="" src="assets/brands/guruji-astro.png" width="459" height="510" alt="Guruji Astro logo" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div class="project-intro">
+              <div>
+                <h3 id="guruji-title">Guruji Astro</h3>
+                <p class="project-deck">A smaller first step.<br>
+                  <em>A more approachable offer.</em>
+                </p>
+              </div>
+              <div>
+                <p class="eyebrow">THE ₹1 CAMPAIGN / AROUND 2022</p>
+                <p>The central idea was simple: a low introductory price could reduce hesitation and encourage people to try astrology-related services for the first time.</p>
+                <p>During my involvement as Social Media Manager, this offer-led campaign became a significant initiative in the brand’s growth phase.</p>
+              </div>
+            </div>
+            <figure class="creative guruji-banner">
+              <a class="art-link" href="assets/projects/guruji-astro/one-rupee-campaign.jpg" target="_blank" rel="noopener" aria-label="View full-size: Historical Guruji Astro banner: Your Life Coach For Life, consult at only ₹1">
+                <img class="" src="assets/projects/guruji-astro/one-rupee-campaign.jpg" width="738" height="225" alt="Historical Guruji Astro banner: Your Life Coach For Life, consult at only ₹1" loading="lazy" decoding="async">
+                <span class="art-open" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>Original historical campaign banner · ₹1 introductory offer</figcaption>
+            </figure>
+            <div class="campaign-notes">
+              <div>
+                <h4>The opportunity</h4>
+                <p>Make initial access more approachable by reducing the perceived commitment of trying the service.</p>
+              </div>
+              <div>
+                <h4>The communication</h4>
+                <p>The surviving banner puts the ₹1 offer beside the brand’s “Your Life Coach For Life” positioning.</p>
+              </div>
+              <div>
+                <h4>The outcome</h4>
+                <p>A significant campaign, as recalled from my time with the brand. Historical performance figures are not currently available.</p>
+              </div>
+            </div>
+            <div class="case-links">
+              <a href="https://www.linkedin.com/company/guruji-astro/home/" target="_blank" rel="noopener noreferrer">Guruji Astro on LinkedIn ↗</a>
+              <a href="https://www.youtube.com/@GurujiAstro" target="_blank" rel="noopener noreferrer">Guruji Astro on YouTube ↗</a>
+              <a href="https://www.instagram.com/gurujiastroapp/" target="_blank" rel="noopener noreferrer">Guruji Astro on Instagram ↗</a>
+              <a href="https://guruji.app.link/6ApX4JRzhtb" target="_blank" rel="noopener noreferrer">Guruji app ↗</a>
+            </div>
+            <details class="case-details">
+              <summary>
+                <span class="detail-label">Additional social &amp; video work</span>
+                <span class="circle-arrow" aria-hidden="true">→</span>
+                <span class="sr-only">: Guruji Astro</span>
+              </summary>
+              <div class="case-details-content">
+                <div class="project-gallery guruji-gallery" aria-label="Guruji Astro social profiles and video examples">
+                  <figure>
+                    <img src="assets/guruji-instagram.webp" alt="Guruji Astro Instagram profile" width="900" height="341" loading="lazy" decoding="async">
+                    <figcaption>Instagram profile</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/guruji-linkedin.webp" alt="Guruji Astro LinkedIn page" width="492" height="270" loading="lazy" decoding="async">
+                    <figcaption>LinkedIn page</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/guruji-youtube-banner.webp" alt="Guruji Astro YouTube channel banner" width="900" height="433" loading="lazy" decoding="async">
+                    <figcaption>YouTube channel</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/guruji-video-thumbnail.webp" alt="Guruji Astro video thumbnail" width="475" height="367" loading="lazy" decoding="async">
+                    <figcaption>Audience-led video</figcaption>
+                  </figure>
+                </div>
+                <div class="case-body">
+                  <div>
+                    <h4>The work</h4>
+                    <ul>
+                      <li>Led five executives across content planning, social execution and quality control.</li>
+                      <li>Managed strategy and audience-aligned content calendars.</li>
+                      <li>Produced and edited 20+ video assets per month.</li>
+                      <li>Executed email marketing and monitored performance.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>The impact</h4>
+                    <p>Separate from the ₹1 campaign: YouTube grew from 500 to 2,000 subscribers (300% growth), with 20+ video assets produced monthly. These figures describe wider channel work.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+      <section class="supporting section wrap" id="supporting">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / MORE BRANDS, MORE CONTEXTS</p>
+            <h2>Different audiences.<br>
+              <em>The same care.</em>
+            </h2>
+          </div>
+          <p>A wider view of social content, brand communication and reputation work. Selected agency and Canadian brand experience.</p>
+        </div>
+        <div class="support-features">
+          <article class="support-feature support-feature-wide" id="kohinoor">
+            <div class="support-caption">
+              <p class="eyebrow">PREMIUM LIFESTYLE</p>
+              <h3>Kohinoor Dark Rum</h3>
+              <p>Premium brand storytelling and lifestyle-led communication for an international audience, as part of agency account work.</p>
+            </div>
+            <div class="creative-grid supporting-pair">
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/kohinoor/rare-treasure.webp" target="_blank" rel="noopener" aria-label="View full-size: Kohinoor Dark Rum rare treasure lifestyle campaign">
+                  <img class="" src="assets/supporting-work/kohinoor/rare-treasure.webp" width="1080" height="1350" alt="Kohinoor Dark Rum rare treasure lifestyle campaign" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Positioning · A rare treasure</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/kohinoor/beyond-the-menu.webp" target="_blank" rel="noopener" aria-label="View full-size: Kohinoor Dark Rum Beyond the Menu campaign">
+                  <img class="" src="assets/supporting-work/kohinoor/beyond-the-menu.webp" width="1347" height="1679" alt="Kohinoor Dark Rum Beyond the Menu campaign" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Brand storytelling · Beyond the menu</figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="support-feature" id="serene">
+            <div class="support-caption">
+              <span class="logo-frame ">
+                <img class="" src="assets/brands/serene-communities.webp" width="300" height="55" alt="Serene Communities logo" loading="lazy" decoding="async">
+              </span>
+              <h3>Serene Communities</h3>
+              <p>Social content strategy, calendars and audience-oriented brand communication for senior living.</p>
+              <p class="note">Serene Communities by Columbia Pacific — represented as one brand context.</p>
+            </div>
+            <div class="creative-grid supporting-pair">
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/serene-communities/celebrate.jpg" target="_blank" rel="noopener" aria-label="View full-size: Serene Communities creative celebrating older adults">
+                  <img class="" src="assets/supporting-work/serene-communities/celebrate.jpg" width="399" height="501" alt="Serene Communities creative celebrating older adults" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Audience connection · Celebrate</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/serene-communities/connection.jpg" target="_blank" rel="noopener" aria-label="View full-size: Serene Communities creative showing residents connecting">
+                  <img class="" src="assets/supporting-work/serene-communities/connection.jpg" width="399" height="501" alt="Serene Communities creative showing residents connecting" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Senior living · Connection</figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="support-feature" id="senior">
+            <div class="support-caption">
+              <span class="logo-frame light">
+                <img class="" src="assets/brands/senior-shield.webp" width="298" height="89" alt="Senior Shield logo" loading="lazy" decoding="async">
+              </span>
+              <h3>Senior Shield</h3>
+              <p>Supporting social media and content work, bringing everyday needs and reassurance into brand communication.</p>
+            </div>
+            <div class="creative-grid supporting-pair">
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/senior-shield/groceries-to-goals.webp" target="_blank" rel="noopener" aria-label="View full-size: Senior Shield From groceries to goals brand creative">
+                  <img class="" src="assets/supporting-work/senior-shield/groceries-to-goals.webp" width="1170" height="1463" alt="Senior Shield From groceries to goals brand creative" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Everyday needs · Brand content</figcaption>
+              </figure>
+              <figure class="creative ">
+                <a class="art-link" href="assets/supporting-work/senior-shield/boarding-call.webp" target="_blank" rel="noopener" aria-label="View full-size: Senior Shield Boarding call brand creative">
+                  <img class="" src="assets/supporting-work/senior-shield/boarding-call.webp" width="1170" height="1463" alt="Senior Shield Boarding call brand creative" loading="lazy" decoding="async">
+                  <span class="art-open" aria-hidden="true">↗</span>
+                </a>
+                <figcaption>Travel and reassurance · Brand content</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+        <div class="brand-contexts">
+          <article class="context-feature" id="hcltech">
+            <span class="logo-frame light">
+              <img class="" src="assets/brands/hcltech.png" width="767" height="142" alt="HCLTech logo" loading="lazy" decoding="async">
+            </span>
+            <div>
+              <p class="eyebrow">REPUTATION INTELLIGENCE</p>
+              <h3>HCLTech</h3>
+              <p>Online reputation management, sentiment tracking, issue monitoring and reporting, including relevant escalation workflows and Meltwater-supported monitoring.</p>
+              <span class="note">Agency experience through Buffalo Soldiers Digital.</span>
+            </div>
+          </article>
+          <article class="context-feature" id="sapsol">
+            <span class="logo-frame ">
+              <img class="" src="assets/brands/sapsol.webp" width="2219" height="2219" alt="SAPSOL Technologies logo" loading="lazy" decoding="async">
+            </span>
+            <div>
+              <p class="eyebrow">CANADIAN B2B MARKETING</p>
+              <h3>SAPSOL Technologies</h3>
+              <p>Social and brand marketing, website communication, email content and campaign support. See the career timeline for the verified role and reporting context.</p>
+              <a class="quiet-link" href="https://www.sapsol.com/" target="_blank" rel="noopener noreferrer">Visit SAPSOL ↗</a>
+            </div>
+          </article>
+        </div>
+        <div class="association-list">
+          <article id="mlc">
+            <span class="logo-frame light">
+              <img class="" src="assets/brands/mlc-college.png" width="281" height="72" alt="MLC College logo" loading="lazy" decoding="async">
+            </span>
+            <h3>MLC College</h3>
+            <p>Canadian social &amp; brand marketing</p>
+          </article>
+          <article id="cgx">
+            <span class="logo-frame ">
+              <img class="" src="assets/brands/cgx-medical.png" width="260" height="84" alt="CGX Medical logo" loading="lazy" decoding="async">
+            </span>
+            <h3>CGX Medical</h3>
+            <p>Canadian brand &amp; product communication</p>
+          </article>
+          <article id="surgery">
+            <span class="logo-frame light">
+              <img class="" src="assets/brands/surgery-tours-india.webp" width="350" height="154" alt="Surgery Tours India logo" loading="lazy" decoding="async">
+            </span>
+            <h3>Surgery Tours India</h3>
+            <p>Professional brand experience</p>
+          </article>
+          <article id="shubham">
+            <span class="wordmark">Shubham<br>Graphics</span>
+            <h3>Shubham Graphics, Jaipur</h3>
+            <p>Professional brand experience</p>
+          </article>
+        </div>
+        <p class="support-note">Additional Canadian experience: STEM Montessori Academy of Canada · Volunteer brand engagement.</p>
+      </section>
+      <section class="ai-module section">
+        <div class="wrap ai-grid">
+          <p class="eyebrow">04 / CREATIVE JUDGMENT &amp; EMERGING TOOLS</p>
+          <h2>Human-led strategy.<br>
+            <em>AI-assisted execution.</em>
+          </h2>
+          <div class="ai-copy">
+            <p>I use AI to accelerate research, ideation and visual exploration. Audience understanding, brand consistency and the final creative decisions remain human responsibilities.</p>
+            <div class="ai-labels">
+              <span>Research &amp; ideation</span>
+              <span>Visual concept development</span>
+              <span>Content preparation</span>
+              <span>Creative experimentation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="experience section wrap" id="resume">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 / EXPERIENCE</p>
+            <h2>A career built<br>
+              <em>through doing.</em>
+            </h2>
+          </div>
+          <p>Social media, brand and content work across India and Canada. Professional career began in November 2021; documented roles are shown below.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-rail" aria-hidden="true">
+            <span></span>
+          </div>
+          <article class="job">
+            <span class="job-period">October 2025–Present</span>
+            <div class="job-content">
+              <h3>Ksolves India Limited</h3>
+              <p class="job-role">Senior Social Media Specialist</p>
+              <p class="job-summary">Social strategy across 9+ LinkedIn pages; content planning, webinars and B2B campaign support.</p>
+              <details class="job-details">
+                <summary>Responsibilities <span aria-hidden="true">+</span>
+                </summary>
+                <ul>
+                  <li>Manage 9+ LinkedIn pages alongside Meta, X and online forums.</li>
+                  <li>Lead social strategy, content planning, calendars, campaign ideation, research and platform-specific content.</li>
+                  <li>Execute 2 end-to-end LinkedIn webinars per week, from planning and promotion to delivery and follow-up content.</li>
+                  <li>Support banking and fintech client onboarding and brand/digital communication.</li>
+                  <li>Execute Meta and LinkedIn campaigns for awareness, audience growth and B2B lead generation.</li>
+                  <li>Use research, social listening and performance insights to guide content.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="job">
+            <span class="job-period">July–October 2025</span>
+            <div class="job-content">
+              <h3>Buffalo Soldiers Digital</h3>
+              <p class="job-role">Social Media Specialist</p>
+              <p class="job-summary">Agency account work across Knauf India, Kohinoor, Senior Shield and Serene Communities, alongside HCLTech ORM.</p>
+              <details class="job-details">
+                <summary>Responsibilities <span aria-hidden="true">+</span>
+                </summary>
+                <ul>
+                  <li>Managed accounts for Kohinoor Dark Rum, Senior Shield, Serene Communities and Knauf India.</li>
+                  <li>Developed calendars, campaign plans and platform-specific content with copy and creative teams.</li>
+                  <li>Coordinated publishing, scheduling and reporting across accounts.</li>
+                  <li>Led HCLTech ORM, monitoring conversations and sentiment and supporting timely responses.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="job">
+            <span class="job-period">September 2024–March 2025 · Mississauga, Canada</span>
+            <div class="job-content">
+              <h3>Sapsol Technologies</h3>
+              <p class="job-role">Brand &amp; Social Media Marketing Strategist</p>
+              <p class="job-summary">Canadian brand and social marketing, including MagniClipper launch preparation and Meta campaigns.</p>
+              <details class="job-details">
+                <summary>Responsibilities <span aria-hidden="true">+</span>
+                </summary>
+                <ul>
+                  <li>Increased engagement by 35% across Sapsol Technologies, MLC College and CGX Medical.</li>
+                  <li>Supported MagniClipper crowdfunding preparation, generating 2,000+ pre-launch website sign-ups through Meta campaigns.</li>
+                  <li>Résumé-reported: 40% increase in brand awareness through Meta advertising and email marketing.</li>
+                  <li>Redesigned the Sapsol website, contributing to a résumé-reported 50% increase in website traffic.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="job">
+            <span class="job-period">July 2023–September 2024 · Remote, Canada</span>
+            <div class="job-content">
+              <h3>STEM Montessori Academy of Canada</h3>
+              <p class="job-role">Volunteer, Brand Engagement Consultant</p>
+              <p class="job-summary">Volunteer work supporting content strategy, multimedia communication and brand engagement.</p>
+              <details class="job-details">
+                <summary>Responsibilities <span aria-hidden="true">+</span>
+                </summary>
+                <ul>
+                  <li>Supported brand and content strategy, multimedia content, email marketing and competitor research.</li>
+                  <li>Collaborated with internal teams and interns to maintain content quality and timely delivery.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="job">
+            <span class="job-period">July 2022–February 2023 · Jaipur, India</span>
+            <div class="job-content">
+              <h3>Guruji Astro</h3>
+              <p class="job-role">Social Media Manager</p>
+              <p class="job-summary">Social content, team leadership, video production and the historical ₹1 introductory campaign.</p>
+              <details class="job-details">
+                <summary>Responsibilities <span aria-hidden="true">+</span>
+                </summary>
+                <ul>
+                  <li>Led five executives across content planning, social execution, brand communication and quality control.</li>
+                  <li>Grew YouTube from 500 to 2,000 subscribers and produced 20+ video assets monthly.</li>
+                  <li>Executed email marketing and monitored content performance.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </div>
+        <div class="timeline-origin">
+          <span>November 2021</span>
+          <p>Professional career begins.</p>
+        </div>
+        <div class="experience-resources">
+          <details class="credentials">
+            <summary>Skills, education &amp; certifications <span aria-hidden="true">+</span>
+            </summary>
+            <div class="credentials-content">
+              <h3>Skills &amp; details</h3>
+              <h4>Social media &amp; content</h4>
+              <p>Strategy · Organic and paid social · Content development · Editorial calendars · Copywriting · Community management · Social listening</p>
+              <h4>Campaigns &amp; stakeholders</h4>
+              <p>Integrated campaigns · Campaign planning · Brand consistency · Creative briefing · Stakeholder coordination · Project management</p>
+              <h4>Analytics &amp; optimization</h4>
+              <p>Social analytics · KPI reporting · Performance analysis · Audience insights · Competitive benchmarking · Trend analysis</p>
+              <h4>Platforms &amp; tools</h4>
+              <p>LinkedIn · Meta · YouTube · X · Sprinklr · Meltwater · Canva · Figma · Premiere Pro · Photoshop · After Effects</p>
+              <h4>Award</h4>
+              <p>
+                <b>Rising Star Award</b>
+                <br>Q1 2026–27 · Ksolves India Limited</p>
+              <h4>Certifications</h4>
+              <ul>
+                <li>HubSpot: Content Marketing; Social Media Marketing I &amp; II</li>
+                <li>LinkedIn: Social Media Marketing Strategy; Digital Marketing Foundations</li>
+                <li>Anthropic: AI Fluency; Claude 101</li>
+                <li>LinkedIn &amp; PMI: Generative AI for Digital Marketers</li>
+              </ul>
+              <h4>Education</h4>
+              <ul>
+                <li>PG Certificate, Project Management · Georgian College · Aug 2024</li>
+                <li>PG Certificate, Marketing Management · Georgian College · Dec 2023</li>
+                <li>Advanced Certification, Audio &amp; Video Editing · TGC Animation · Jun 2021</li>
+                <li>BA, Journalism &amp; Mass Communication · Manipal University · Aug 2020</li>
+              </ul>
+            </div>
+          </details>
+          <button class="quiet-link" id="print-resume" type="button">Print / save experience as PDF ↗</button>
+        </div>
+      </section>
+      <section class="contact section" id="contact">
+        <div class="wrap contact-grid">
+          <div>
+            <p class="eyebrow">LET’S START A CONVERSATION</p>
+            <h2>Let’s make the<br>next story <em>count.</em>
+            </h2>
+          </div>
+          <div class="contact-side">
+            <p>For roles, collaborations or a conversation about social strategy.</p>
+            <a class="contact-primary" href="mailto:sanattsingh009@gmail.com">Email Sanat <span class="circle-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="email-address" href="mailto:sanattsingh009@gmail.com">sanattsingh009@gmail.com</a>
+            <div class="contact-social">
+              <a href="https://www.linkedin.com/in/sanatsingh1/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="tel:+918559823300">+91 8559823300 ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="#home">
+          <span class="brand-initials">SS<span>.</span>
+          </span>Sanat Singh</a>
+        <span>Social Media · Brand · Content</span>
+        <a href="#home">Back to top ↑</a>
+        <small>© 2026 Sanat Singh</small>
+      </div>
+    </footer>
+  </body>
 </html>
