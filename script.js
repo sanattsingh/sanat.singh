@@ -50,7 +50,7 @@
   mobile.addEventListener('change', () => closeMenu());
   const strip = document.querySelector('.brand-showcase');
   const pause = document.querySelector('.marquee-toggle');
-  pause.addEventListener('click', () => {
+  pause?.addEventListener('click', () => {
     const paused = strip.classList.toggle('is-paused');
     pause.setAttribute('aria-pressed', String(paused));
     if (!paused) strip.classList.remove('keyboard-browsing');
@@ -62,7 +62,7 @@
       if (link.matches(':focus-visible')) strip.classList.add('keyboard-browsing');
     });
   });
-  const sections = ['about', 'work', 'resume', 'contact'].map(id => document.getElementById(id));
+  const sections = ['about', 'work', 'resume', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
   const sectionLinks = [...nav.querySelectorAll('a[href^="#"]')];
   const timeline = document.querySelector('.timeline');
   let frame = 0;
@@ -74,9 +74,11 @@
       if (link.getAttribute('href') === active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
-    const bounds = timeline.getBoundingClientRect();
-    const progress = reduced.matches ? 1 : Math.max(0, Math.min(1, (innerHeight * .68 - bounds.top) / bounds.height));
-    timeline.style.setProperty('--timeline-progress', progress.toFixed(3));
+    if (timeline) {
+      const bounds = timeline.getBoundingClientRect();
+      const progress = reduced.matches ? 1 : Math.max(0, Math.min(1, (innerHeight * .68 - bounds.top) / bounds.height));
+      timeline.style.setProperty('--timeline-progress', progress.toFixed(3));
+    }
     frame = 0;
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(updateScroll); }
@@ -89,7 +91,7 @@
   const running = new Set();
   const counterFinishes = new Set();
   function animate(node, frames, options) {
-    if (reduced.matches || document.hidden || !node.animate) return;
+    if (!node || reduced.matches || document.hidden || !node.animate) return;
     const animation = node.animate(frames, options);
     running.add(animation);
     animation.finished.then(() => running.delete(animation), () => running.delete(animation));
@@ -101,6 +103,7 @@
   const activeControllers = new Set();
   let pointerFrame = 0, previousTime = 0, pointerOwner = null;
   function controller(root, layers, kind) {
+    if (!root) return;
     root.dataset.motionPointer = kind;
     const state = { root, layers, kind, bounds: null, dirty: true, visible: false, x: 0, y: 0, tx: 0, ty: 0 };
     controllers.set(root, state);
@@ -115,15 +118,17 @@
   });
   controller(document.querySelector('.hero'), heroLayers, 'hero');
   const portrait = document.querySelector('.portrait-line img');
-  const portraitFrame = document.createElement('div');
-  portraitFrame.className = 'portrait-motion';
-  const portraitAmbient = document.createElement('div');
-  portraitAmbient.className = 'portrait-ambient';
-  portrait.before(portraitFrame);
-  portraitFrame.append(portraitAmbient);
-  portraitAmbient.append(portrait);
-  controller(portraitFrame, [{ node: portrait }], 'portrait');
-  document.querySelectorAll('.creative .art-link').forEach((link, index) => {
+  if (portrait) {
+    const portraitFrame = document.createElement('div');
+    portraitFrame.className = 'portrait-motion';
+    const portraitAmbient = document.createElement('div');
+    portraitAmbient.className = 'portrait-ambient';
+    portrait.before(portraitFrame);
+    portraitFrame.append(portraitAmbient);
+    portraitAmbient.append(portrait);
+    controller(portraitFrame, [{ node: portrait }], 'portrait');
+  }
+  document.querySelectorAll('.creative .art-link, .project-card').forEach((link, index) => {
     const frame = document.createElement('div');
     frame.className = `motion-frame motion-variant-${index % 3}`;
     link.before(frame);
@@ -219,7 +224,7 @@
       entries.forEach(entry => {
         const node = entry.target;
         node.classList.toggle('motion-visible', entry.isIntersecting);
-        const state = controllers.get(node) || controllers.get(node.querySelector('.art-link'));
+        const state = controllers.get(node) || controllers.get(node.querySelector('.art-link, .project-card'));
         if (state) { state.visible = entry.isIntersecting; if (!state.visible) settle(state); }
       });
     }, { threshold: 0 });
@@ -251,7 +256,7 @@
     ], { duration, delay, easing: ease, fill: 'backwards' });
     if (animation) opening.push(animation);
   }
-  if (!reduced.matches) {
+  if (hero && !reduced.matches) {
     const prelude = animate(document.querySelector('.social-orbit'), [{ opacity: .05, scale: .94 }, { opacity: 1, scale: 1 }], { duration: 900, easing: ease });
     if (prelude) opening.push(prelude);
     document.querySelectorAll('.social-mark').forEach((node, i) => {
@@ -270,20 +275,23 @@
   }
   // Finish the opening immediately when visitors skip ahead or focus a hero link.
   function finishOpening() { opening.forEach(animation => { if (animation.playState !== 'finished') animation.finish(); }); }
-  hero.addEventListener('focusin', finishOpening);
-  addEventListener('scroll', () => { if (hero.getBoundingClientRect().bottom < 80) finishOpening(); }, { passive: true });
+  if (hero) {
+    hero.addEventListener('focusin', finishOpening);
+    addEventListener('scroll', () => { if (hero.getBoundingClientRect().bottom < 80) finishOpening(); }, { passive: true });
+  }
 
   function reveal(node) {
     node.classList.add('is-in-view');
     let targets = [node];
     if (node.matches('.project-intro, .section-heading')) targets = [...node.children];
+    if (node.matches('.project-card')) targets = [...node.children];
     const pillarDelay = node.matches('.capabilities > div') && innerWidth >= 768 ? [...node.parentElement.children].indexOf(node) * 85 : 0;
     targets.forEach((target, i) => animate(target, [
       { opacity: .28, transform: `translateY(${target.matches('.creative, .portrait-line') ? 30 : 22}px)` },
       { opacity: 1, transform: 'translateY(0)' }
     ], { duration: 720, delay: pillarDelay + i * 85, easing: ease }));
   }
-  const revealNodes = document.querySelectorAll('.intro-grid h2, .portrait-line, .intro-copy, .capabilities > div, .section-heading, .case-topline, .case-copy, .project-intro, .creative:not(.case-details .creative), .chapter-narrative, .campaign-notes, .support-caption, .ai-module, .contact');
+  const revealNodes = document.querySelectorAll('.intro-grid h2, .portrait-line, .intro-copy, .capabilities > div, .section-heading, .case-topline, .case-copy, .project-intro, .creative:not(.case-details .creative), .project-card, .chapter-narrative, .campaign-notes, .support-caption, .ai-module, .contact');
   const metricNodes = document.querySelectorAll('.pharmassist-stat b, .outcomes b');
   function countUp(node) {
     if (reduced.matches) return;
@@ -323,10 +331,12 @@
       entries.forEach(entry => { if (entry.isIntersecting) { countUp(entry.target); counters.unobserve(entry.target); } });
     }, { threshold: .5 });
     metricNodes.forEach(node => counters.observe(node));
-    const ambient = new IntersectionObserver(entries => {
-      hero.classList.toggle('hero-inactive', !entries[0].isIntersecting);
-    });
-    ambient.observe(hero);
+    if (hero) {
+      const ambient = new IntersectionObserver(entries => {
+        hero.classList.toggle('hero-inactive', !entries[0].isIntersecting);
+      });
+      ambient.observe(hero);
+    }
   }
   reduced.addEventListener('change', () => {
     if (!reduced.matches) return;
@@ -347,5 +357,5 @@
     document.querySelectorAll('#resume details').forEach(details => { printState.set(details, details.open); details.open = true; });
   });
   addEventListener('afterprint', () => { printState.forEach((open, details) => { details.open = open; }); printState.clear(); });
-  document.getElementById('print-resume').addEventListener('click', () => print());
+  document.getElementById('print-resume')?.addEventListener('click', () => print());
 })();

@@ -1,6 +1,6 @@
-# Sanat Singh — Portfolio V3.1 — final motion review draft
+# Sanat Singh — Multi-page portfolio review draft
 
-A one-page static portfolio. No build step, framework, package installation or CMS is needed.
+A static homepage with five dedicated case-study pages. No build step, framework, package installation or CMS is needed.
 
 ## Preview
 
@@ -10,7 +10,8 @@ Alternatively, from this folder run `python -m http.server 8766 --bind 127.0.0.1
 
 ## Find the right file
 
-- `index.html`: all visible content, links, image references and metrics in semantic HTML.
+- `index.html`: hero, About, five-card Selected Work gallery, supporting brands, Experience and Contact.
+- `work/the-pharmassist.html`, `work/ksolves.html`, `work/magniclipper.html`, `work/knauf-india.html`, `work/guruji-astro.html`: the complete approved case studies, numbered 01–05, including images, metrics, disclosures and external links.
 - `styles.css`: palette, font stack, spacing and motion tokens at the top, followed by named layout sections and responsive rules.
 - `script.js`: mobile menu, brand-strip pause control, active navigation, timeline progress, the 1.65-second hero opening, visibility-aware ambient movement, delegated pointer interactions, one-time section reveals and formatted metric count-ups and experience printing.
 - `assets/manifest.json`: source filename, brand, type, dimensions and usage for each supplied file. It documents assets; the page does not load this JSON at runtime.
@@ -18,7 +19,7 @@ Alternatively, from this folder run `python -m http.server 8766 --bind 127.0.0.1
 
 ## Replace a project image
 
-1. Find the project's ID in index.html: `pharmassist`, `ksolves`, `magni`, `knauf` or `guruji`.
+1. Open the corresponding case-study HTML file under `work/`; its project ID remains `pharmassist`, `ksolves`, `magni`, `knauf` or `guruji`.
 2. Put the replacement in the matching folder under assets/projects.
 3. Update both the image `src` and the enclosing link `href` to the new relative path.
 4. Set `width` and `height` to the actual file dimensions. Update `alt` text and the caption to describe the actual work.
@@ -33,11 +34,11 @@ Within the relevant project's `.creative-grid`, copy a complete `<figure class="
 
 ## Update a metric
 
-Search for its exact number in index.html. Update the number, label and reporting-period note together. Keep brand/page totals separate from personally attributable results. Do not convert MagniClipper sign-ups into sales or backers, or add Guruji campaign numbers without evidence. The figures remain ordinary HTML text. Major Pharmassist, Ksolves and MagniClipper values count up once on entering the viewport over 1.1 seconds; formatting is derived from the source text. The final figure remains stable for assistive technology. Reduced-motion visitors see the final value immediately.
+Search for its exact number in the corresponding case-study file under `work/`. Update the number, label and reporting-period note together. Keep brand/page totals separate from personally attributable results. Do not convert MagniClipper sign-ups into sales or backers, or add Guruji campaign numbers without evidence. The figures remain ordinary HTML text. Major Pharmassist, Ksolves and MagniClipper values count up once on entering the viewport over 1.1 seconds; formatting is derived from the source text. The final figure remains stable for assistive technology. Reduced-motion visitors see the final value immediately.
 
 ## Update text
 
-Search for the project ID or visible heading in index.html and edit the relevant paragraph/list item. Retain valid links. Use h2 for main sections, h3 for featured project/brand names and h4 for details inside a project. The content stays available when JavaScript is disabled.
+Edit homepage content in `index.html` and project content in the corresponding `work/*.html` file. Retain valid links. Each page has one h1; the project h1 retains the approved visual treatment. The content stays available when JavaScript is disabled.
 
 ## Add or replace a brand logo
 
@@ -67,9 +68,11 @@ The phone menu closes via its Close button, link selection, outside click or Esc
 
 The original repository has a root index.html and assets folder, with no tracked build configuration or .github/workflows file. Its live URL is https://sanattsingh.github.io/sanat.singh/ . This draft keeps the same static root structure and uses relative asset paths compatible with that project URL.
 
-Local review branch: **design/portfolio-v3**. The completed V3.1 working draft was checkpointed as work/v31-motion-checkpoint.zip before the final motion revisions. The work is currently uncommitted and has not been pushed. The local main branch and origin/main remain at fb3b9610c60961cd3b81cbf5715f0e6237127bd5.
+Local review branch: **design/multipage-portfolio**, based on the approved publication at main commit `fc13a4182900b41e4f01851caa0ae05a819ab56b`. This structural revision has not been pushed, merged or published.
 
-After explicit approval, the publishing flow is to review/commit the chosen files, push the review branch, and merge only when separately authorized. GitHub Pages then serves from the repository's configured publishing source. The exact Settings → Pages source (branch/folder or GitHub-managed deployment) was not available in the local checkout and has not been changed; verify it before publishing. Do not switch the source merely to preview this draft.
+After explicit approval, publish the chosen revision through the existing main-branch GitHub Pages configuration. Include the root files, the entire `work/` page directory and `assets/`. Styles, JavaScript and fonts remain shared at the root; nested pages use `../` asset paths and return to `../index.html#section`. No deployment configuration was changed.
+
+The Ksolves webinar uses the approved redacted `assets/projects/ksolves/keda-webinar.webp` asset. Do not restore an unredacted source or the removed webinar caption. The Pharmassist is an ongoing independent brand collaboration from 2023–Present in the Experience timeline; it is not presented as conventional full-time employment.
 
 ## Content notes needing owner input later
 
